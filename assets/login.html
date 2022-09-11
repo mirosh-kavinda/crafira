@@ -1,0 +1,41 @@
+
+  <div class="form-box">
+    <div class="box-sizing">
+      <img src="images/logo1.png" alt="Carfia" class="Logo">
+    </div>
+    <div class="button-box">
+      <div id="btn"></div>
+      <button type="button" class="toggle-btn" onclick="Loging()">Log In</button>
+      <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+    </div>
+    <form id="loging" class="input-group modal-content animate" >
+      <input type="text" class="input-field" placeholder="User Id" required>
+      <input type="text" class="input-field" placeholder="Enter password" required>
+      <input type="checkbox" class="chech-box"><span>Remember password</span>
+      <button type="submit" class="submit-btn">Log In</button>
+    </form>
+    <form id="register" class="input-group">
+      <input type="text" class="input-field" placeholder="User Id" required>
+      <input type="email" class="input-field" placeholder="Email Id" required>
+      <input type="text" class="input-field" placeholder="Enter password" required>
+      <input type="text" class="input-field" placeholder="Re-Enter password" required>
+      <input type="checkbox" class="chech-box"><span>I agree to the terms & condition</span>
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+  </div>
+  
+  <script>
+    var x = document.getElementById("loging");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+
+    function Register() {
+      x.style.left = "-400px";
+      y.style.left = "50px";
+      z.style.left = "110px";
+    }
+    function Loging() {
+      x.style.left = "50px";
+      y.style.left = "450px";
+      z.style.left = "0px";
+    }</script>

@@ -15,7 +15,10 @@
 body {
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
-
+.placehold{
+  height: 100%;
+  margin-top: 90px;
+}
 @-webkit-keyframes fadeIn {
   0% {
     -webkit-transform: scale(0.5);

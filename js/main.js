@@ -12,6 +12,10 @@ $(function () {
   $("#cards-container").load("assets/cards.html");
 });
 
+$(function () {
+  $("#login-placeholder").load("assets/login.html");
+});
+
 $(window).scroll(function() {
   if ($(this).scrollTop() > 200) { //use `this`, not `document`
       $('.icon-scroll').css({
@@ -19,3 +23,11 @@ $(window).scroll(function() {
       });
   }
 });
+
+
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
