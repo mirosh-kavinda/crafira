@@ -19,3 +19,11 @@ $(window).scroll(function() {
       });
   }
 });
+$(document).ready(function(){
+  $('.scrollspy').scrollSpy();
+});
+     
+  
+setTimeout(function(){
+    $('loader_bg').fadeToggle();
+  },1500);
