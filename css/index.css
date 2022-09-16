@@ -1,7 +1,6 @@
 /* general */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 * {
-  
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
@@ -13,14 +12,40 @@
   text-transform: capitalize;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  justify-content: center;
 }
-h1, h5,p{
-  font-family: 'Poppins',sans-serif; 
+
+/* loader component */
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1000s linear infinite;
 }
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center-loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 
 body {
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+
 }
+
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -38,6 +63,7 @@ body {
   }
 }
 
+
 /* navigation  */
 
 .navigation {
@@ -47,7 +73,7 @@ body {
     rgb(129, 156, 156) 153.1%
   );
 }
-.icons{
+.icons {
   margin-top: 10px;
 }
 
@@ -70,30 +96,33 @@ body {
   border-radius: 20px;
 }
 
-
-
 /* carousel*/
 
 .carousel {
+
   height: 500px;
   perspective: 600px;
   transform: translateY(-120px);
+  
 }
 
 .carousel .carousel-item {
   cursor: grab;
   width: 500px;
+
 }
 
 .carousel .carousel-item:active {
   cursor: grabbing;
-  height: 1.1rem;
+  height: 1.0rem;
 
+ 
 }
 
 .carousel .carousel-item img {
-  width: 100%;
+  width: 90%;
   height: 50vh;
+ 
 }
 
 .carousel .carousel-item h3 {
@@ -110,47 +139,44 @@ body {
 
 .icon-scroll,
 .icon-scroll:before {
-    position: absolute;
-    left: 50%
+  position: absolute;
+  left: 50%;
 }
 .icon-scroll {
-  
-    width: 30px;
-    height: 50px;
-    margin-left: -20px;
-    bottom: 10px;
-    margin-top: -35px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 25px
+  width: 30px;
+  height: 50px;
+  margin-left: -20px;
+  bottom: 10px;
+  margin-top: -35px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 25px;
 }
 
-
 .icon-scroll:before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background: rgb(0, 0, 0);
-    margin-left: -4px;
-    top: 8px;
-    border-radius: 4px;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-name: scroll
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: rgb(0, 0, 0);
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
 }
 
 @keyframes scroll {
-    0% {
-        opacity: 1
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(26px)
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(26px);
+  }
 }
 
-
 /* What is crafira content */
-.what-is-crafira{
+.what-is-crafira {
   background-image: linear-gradient(
     92.6deg,
     rgb(5, 108, 131) 0.7%,
@@ -160,53 +186,74 @@ body {
   border-radius: 10px;
   padding: 10px;
   margin: 10px 10px;
-  
 }
-
-
+.modal{
+  top:6% !important;
+  max-height: 99%;
+}
 /* gain Responsive  */
+
+
+
+.heading{
+  font-size: 44px;
+  font-weight: 500;
+}
 @media only screen and (max-width: 992px) {
   .nav-content {
     display: none;
   }
   .search-box {
     height: 23px;
-    margin-top:19px;
+    margin-top: 19px;
   }
   .logopng {
-
     margin: -10px 13px;
     padding: 10px;
   }
-.circle{
-  width: 100px;
-  height: 100px;
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+  .modal{
+    top:1% !important;
+    max-height: 9;
+  }
+  .heading{
+    font-size: 38px;
+    font-weight: 500;
+  }
 }
-}
+
 @media only screen and (max-width: 600px) {
-  .circle{
+  .circle {
     width: 100px;
     height: 100px;
   }
   .search-box {
-
-    height: 23px;
-    margin-top:19px;
+    height: 37px;
+    margin-top: 18px;
   }
   .logopng {
-
-    margin: -30px 1px;
+    margin: -40px 70px;
+    width: 200px;
     padding: 10px;
   }
-
-}
-
-@media (max-width: 767px) {
-  .icon-scroll {
-     display: none;
+  .modal{
+    top:3% !important;
+    max-height:98% !important;
+  }
+  .heading{
+    font-size: 29px;
+    font-weight: 500;
+  }
+  .icon-scroll{
+    display: none;
+  }
+  .cards-container{
+   top: 0px;
   }
 }
-
 
 
 
@@ -237,3 +284,4 @@ body {
 *:focus {
   outline: 0;
 }
+

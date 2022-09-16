@@ -1,5 +1,5 @@
 $(function () {
-  $("#nav-placeholder").load("../CRAFIRA/assets/nav.html");
+  $("#nav-placeholder").load("assets/nav.html");
 });
 $(function () {
   $("#footer-placeholder").load("assets/footer.html");
@@ -9,9 +9,15 @@ $(function () {
 });
 
 $(function () {
-  $("#cards-container").load("assets/cards.html");
+  $("#cards-container").load("assets/listing.html");
 });
 
+$(function () {
+  $("#login-placeholder").load("assets/login.html");
+});
+
+
+// Back to top button 
 $(window).scroll(function() {
   if ($(this).scrollTop() > 200) { //use `this`, not `document`
       $('.icon-scroll').css({
@@ -23,7 +29,3 @@ $(document).ready(function(){
   $('.scrollspy').scrollSpy();
 });
      
-  
-setTimeout(function(){
-    $('loader_bg').fadeToggle();
-  },1500);
