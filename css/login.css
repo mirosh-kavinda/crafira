@@ -1,0 +1,88 @@
+/* * Login Modal (Sachith)  */ */
+
+.form-box {
+
+  height: 600px;
+  width: auto;
+  position: absolute;
+  background-color: #e3e3e5;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+.button-box {
+  margin-top:5px;
+  width: 220px;
+  margin: 35px ;
+  /* */
+  position: relative;
+  box-shadow: 0 0 20px 9px #0101011f;
+  border-radius: 30px;
+}
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: #437c90;
+  border-radius: 30px;
+color: white;
+}
+.input-group {
+  top: 150px;
+  position: absolute;
+  width: 200px;
+  transition: 0.5s;
+}
+.input-field {
+
+  width: 100%;
+  padding: 10px ;
+  color: #000;
+
+}
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: 0 10;
+  background:#437c90;
+  border-radius: 30px;
+}
+
+#loging {
+  left: 50px;
+  height: 1000pxs;
+}
+#register {
+  left: 450px;
+}
+.box-sizing {
+  border: 1px solid #437c90;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+
+.modal-style {
+  width: 320px;
+  height: 580px;
+  background-color: #e3e3e5;
+
+  border-radius: 20px;
+  overflow: hidden;
+text-decoration-thickness: 10px;
+}

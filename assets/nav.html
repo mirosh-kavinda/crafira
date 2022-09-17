@@ -1,53 +1,93 @@
 <!-- Navigation Bar -->
-<script>
-$(document).ready(function () {
-    $('.sidenav').sidenav();
-  });
+<script type="text/javascript">
+
 </script>
 
-<nav class=" nav-extended navigation">
-  <div class="row">
-    <a id=" logo-container" href="index.html" class=" col s8 m4 l2  "><img src="images/logo1.png" class="logopng responsive-img"></a>
-    <a href="#" data-target="nav-mobile" class="sidenav-trigger right m1"><div id="menu-btn" class="fas fa-bars"></div></a>
-   
-    <form action="" class="col s9 m4 l8   ">
+<!-- Modal content -->
+<div id="modal1" class="modal modal-style">
+  <div class="modal-header ">
+    <div id="login-placeholder"></div>
+  </div>
+</div>
+
+<nav class=" nav-extended navbar-fixed navigation">
+  <div class="row nav-wrapper">
+    <a id=" logo-container" href="index.html" class=" col s8 m4 l2  "><img src="images/logo1.png"
+        class="logopng responsive-img"></a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger right m1">
+      <div id="menu-btn" class="fas fa-bars " style="font-size:22px;"></div>
+    </a>
+
+    <form action="" class="col s7 m4 l7   ">
       <div class="search-box  ">
-        <input id="search " type="search" class="center"required>
-        <label class="label-icon" for="search"> <div id="search-btn" class="fas fa-search"></div></label>
+        <input id="search " type="search" class="search-bar center" required>
+        <label class="label-icon " for="search"> <a id="search-btn " class="fas fa-search  black-text  right"
+            style="font-size:16px;"></a></label>
       </div>
     </form>
 
+<<<<<<< HEAD
     <ul class="col s3 m3 l2">
       <li><a href="#">
         <a href="cart.html" class="fas fa-shopping-cart"></a>
         </a></li>
       <li> <a class="fas fa-user" onclick="document.getElementById('id01').style.display='block'"></a></li>
       
+=======
+    <ul class=" icons col s5 m3 l3">
+      </a></li>
+      <li> <a class=" modal-trigger" href="#modal1"> Sign in</a></li>
+      <li>
+        <a href="cart.html" class="fas fa-shopping-cart" style="font-size:22px" ;></a>
+      </li>
+>>>>>>> 9dc83265281d8615aa8b1e3e67bb2c1d86715f12
     </ul>
-  </div>
-  
-  <ul id="nav-mobile" class="sidenav ">
-    <li class="tab"><a href="login.html">All Categories</a></li>
-    <ul class="right">
-      <li class="tab"><a href="login.html">Jewelry and accessories</a></li>
-      <li class="tab"><a href="#test2">Clothing and shoes</a></li>
-      <li class="tab "><a href="#test3">Home and living</a></li>
-      <li class="tab"><a href="#test4">Wedding and party</a></li>
-      <li class="tab "><a href="#test3">Toys and Entertainment</a></li>
-      <li class="tab"><a href="#test4">Art and Collectibles</a></li>
-    </ul>
-  </ul>
+
+
   </div>
   <div class="nav-content">
     <ul class="tabs tabs-transparent center">
-      <li class="tab"><a href="login.html">Jewelry and accessories</a></li>
-      <li class="tab"><a href="#test2">Clothing and shoes</a></li>
-      <li class="tab "><a href="#test3">Home and living</a></li>
-      <li class="tab"><a href="#test4">Wedding and party</a></li>
-      <li class="tab "><a href="#test3">Toys and Entertainment</a></li>
-      <li class="tab"><a href="#test4">Art and Collectibles</a></li>
+      <li class="tab"><a href="Jew&Acc.html">Jewelry and accessories</a></li>
+      <li class="tab"><a href="Clo&Shoe.html">Clothing and shoes</a></li>
+      <li class="tab "><a href="Home&liv.html">Home and living</a></li>
+      <li class="tab"><a href="Wedding&part.html">Wedding and party</a></li>
+      <li class="tab "><a href="Toy&Entertain.html">Toys and Entertainment</a></li>
+      <li class="tab"><a href="Art&Collect.html">Art and Collectibles</a></li>
     </ul>
   </div>
 </nav>
+
+<ul id="mobile-demo" class="sidenav">
+  <li ><a href="index.html">All Categories</a></li>
+  <li ><a href="Jew&Acc.html">Jewelry and accessories</a></li>
+  <li ><a href="Clo&Shoe.html">Clothing and shoes</a></li>
+  <li ><a href="Home&liv.html">Home and living</a></li>
+  <li ><a href="Wedding&part.html">Wedding and party</a></li>
+  <li ><a href="Toy&Entertain.html">Toys and Entertainment</a></li>
+  <li ><a href="Art&Collect.html">Art and Collectibles</a></li>
+</ul>
+<script> 
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
+  
+  setTimeout(function () {
+    $('loader_bg').fadeToggle();
+  }, 1500);
+
+  $(document).ready(function () {
+    $('.modal').modal({
+      opacity: 1,
+      preventScrolling: true,
+      dismissible: false,
+      closeIcon: true
+    });
+
+  });
+
+  $(function () {
+    $("#login-placeholder").load("assets/login.html");
+  });</script>
 
 <!--Navigation Bar code end-->
