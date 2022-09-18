@@ -40,12 +40,9 @@
   margin: auto;
 }
 
-
 body {
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-
 }
-
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -63,7 +60,6 @@ body {
   }
 }
 
-
 /* navigation  */
 
 .navigation {
@@ -73,13 +69,15 @@ body {
     rgb(129, 156, 156) 153.1%
   );
 }
-#signout{
+#signout {
   display: none;
 }
 .icons {
   margin-top: 10px;
 }
-
+nav.nav-wrappper{
+  margin-bottom: 0px;
+}
 .logopng {
   mix-blend-mode: lighten;
   width: 180px;
@@ -102,30 +100,24 @@ body {
 /* carousel*/
 
 .carousel {
-
   height: 500px;
   perspective: 600px;
   transform: translateY(-120px);
-  
 }
 
 .carousel .carousel-item {
   cursor: grab;
   width: 500px;
-
 }
 
 .carousel .carousel-item:active {
   cursor: grabbing;
-  height: 1.0rem;
-
- 
+  height: 1rem;
 }
 
 .carousel .carousel-item img {
   width: 90%;
   height: 50vh;
- 
 }
 
 .carousel .carousel-item h3 {
@@ -190,15 +182,13 @@ body {
   padding: 10px;
   margin: 10px 10px;
 }
-.modal{
-  top:6% !important;
+.modal {
+  top: 6% !important;
   max-height: 99%;
 }
 /* gain Responsive  */
 
-
-
-.heading{
+.heading {
   font-size: 44px;
   font-weight: 500;
 }
@@ -211,18 +201,18 @@ body {
     margin-top: 19px;
   }
   .logopng {
-    margin: -100px 13px;
+    margin: 5px 13px;
     padding: 10px;
   }
   .circle {
     width: 100px;
     height: 100px;
   }
-  .modal{
-    top:1% !important;
+  .modal {
+    top: 1% !important;
     max-height: 9;
   }
-  .heading{
+  .heading {
     font-size: 38px;
     font-weight: 500;
   }
@@ -234,31 +224,27 @@ body {
     height: 100px;
   }
   .search-box {
-    height: 37px;
+    height: 30px;
     margin-top: 18px;
   }
   .logopng {
-    margin: -40px 70px;
+    margin: -10px 40px;
     width: 200px;
     padding: 10px;
   }
-  .modal{
-    top:3% !important;
-    max-height:98% !important;
+  .modal {
+    top: 3% !important;
+    max-height: 98% !important;
   }
-  .heading{
+  .heading {
     font-size: 29px;
     font-weight: 500;
   }
-  .icon-scroll{
-    display: none;
-  }
-  .cards-container{
-   top: 0px;
+
+  .cards-container {
+    top: 0px;
   }
 }
-
-
 
 /* footer */
 
@@ -287,4 +273,3 @@ body {
 *:focus {
   outline: 0;
 }
-
