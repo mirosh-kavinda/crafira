@@ -1,7 +1,3 @@
-<!-- Navigation Bar -->
-<script type="text/javascript">
-
-</script>
 
 <!-- Modal content -->
 <div id="modal1" class="modal modal-style">
@@ -12,23 +8,24 @@
 
 <nav class=" nav-extended navbar-fixed navigation">
   <div class="row nav-wrapper">
-    <a id=" logo-container" href="index.html" class=" col s8 m4 l2  "><img src="images/logo1.png"
+    <a call_type="home" href="#" class=" col s8 m4 l2 btn_load_screen "><img src="images/logo1.png"
         class="logopng responsive-img"></a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger right m1">
       <div id="menu-btn" class="fas fa-bars " style="font-size:22px;"></div>
     </a>
 
-    <form action="" class="col s7 m4 l7   ">
-      <div class="search-box  ">
+    <form action="" class="col s7 m4 l7 search-box ">
+    
         <input id="search " type="search" class="search-bar center" required>
         <label class="label-icon " for="search"> <a id="search-btn " class="fas fa-search  black-text  right"
             style="font-size:16px;"></a></label>
-      </div>
+    
     </form>
 
     <ul class=" icons col s5 m3 l3">
       </a></li>
-      <li> <a class=" modal-trigger" href="#modal1"> Sign in</a></li>
+      <li> <a class=" modal-trigger" id="signin" href="#modal1"> Sign in</a></li>
+      <li> <a class=" href="#" id ="signout"> Sign Out</a></li>
       <li>
         <a href="cart.html" class="fas fa-shopping-cart" style="font-size:22px" ;></a>
       </li>
@@ -38,12 +35,12 @@
   </div>
   <div class="nav-content">
     <ul class="tabs tabs-transparent center">
-      <li class="tab"><a href="Jew&Acc.html">Jewelry and accessories</a></li>
-      <li class="tab"><a href="Clo&Shoe.html">Clothing and shoes</a></li>
-      <li class="tab "><a href="Home&liv.html">Home and living</a></li>
-      <li class="tab"><a href="Wedding&part.html">Wedding and party</a></li>
-      <li class="tab "><a href="Toy&Entertain.html">Toys and Entertainment</a></li>
-      <li class="tab"><a href="Art&Collect.html">Art and Collectibles</a></li>
+      <li class="tab"><a class=" btn_load_screen "  call_type="jewel"href="#">Jewelry and accessories</a></li>
+      <li class="tab"><a class=" btn_load_screen " call_type="cloth"href="#">Clothing and shoes</a></li>
+      <li class="tab "><a class=" btn_load_screen " call_type="live" href="#">Home and living</a></li>
+      <li class="tab"><a class=" btn_load_screen " call_type="wed"href="#">Wedding and party</a></li>
+      <li class="tab "><a class=" btn_load_screen "  call_type="toy"href="#">Toys and Entertainment</a></li>
+      <li class="tab"><a class=" btn_load_screen "  call_type="art"href="#">Art and Collectibles</a></li>
     </ul>
   </div>
 </nav>

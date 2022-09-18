@@ -4,7 +4,8 @@ $con=new mysqli("localhost","root","","Crafira");
 
 if ($con->connect_error){
   die("Failed to connect  :" .$con->connect_error);
-}else{
+}
+else{
   if (isset($_POST['signup'])){
     $firstName = $_POST["uname"];
     $email=$_POST["email"];
@@ -22,7 +23,7 @@ if ($con->connect_error){
       }
 }elseif(isset($_POST["login"])){
 
-  $email=$_POST['email'];
+$email=$_POST['email'];
 $password=$_POST['password'];
 
 $con=new mysqli("localhost","root","","Crafira");
@@ -33,10 +34,13 @@ if ($con->connect_error){
     $stmt->bind_param("s",$email);
     $stmt->execute();
     $stmt_result=$stmt->get_result();
+    
     if($stmt_result->num_rows>0){
         $data=$stmt_result->fetch_assoc();
         if($data['password']=== $password){
-            echo "login success ";
+            echo '<style>#signout{display:block !important;}</style>';
+            echo '<style>#signin{display:none !important;}</style>';
+           
         }else {
             echo " login failed";
         }
@@ -47,6 +51,5 @@ if ($con->connect_error){
 }
 }
 }
-
 
 ?>

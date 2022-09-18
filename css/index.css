@@ -73,6 +73,9 @@ body {
     rgb(129, 156, 156) 153.1%
   );
 }
+#signout{
+  display: none;
+}
 .icons {
   margin-top: 10px;
 }
@@ -80,7 +83,7 @@ body {
 .logopng {
   mix-blend-mode: lighten;
   width: 180px;
-  margin: -40px 13px;
+  margin: 13px 13px;
   padding: 0px;
 }
 
@@ -208,7 +211,7 @@ body {
     margin-top: 19px;
   }
   .logopng {
-    margin: -10px 13px;
+    margin: -100px 13px;
     padding: 10px;
   }
   .circle {
