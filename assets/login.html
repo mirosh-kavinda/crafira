@@ -1,16 +1,16 @@
-
 <link rel="stylesheet" href="css/login.css" />
-<a href="#!" class=" modal-action modal-close"><i class='right'>close</i></a>
+<a href="#!" class=" modal-action modal-close"><i style="font-size:22px; color: black;padding: 1px 10px;"
+    class='far fa-window-close right'></i></a>
 <div class="form-box">
 
-  <h5 class="  col s12 m12 l12 ">Welcome to Crafira</h5>
+  <h5 class=" center col s10 m10 l10 " style="font-weight:700;">Welcome to Crafira</h5>
 
   <div class="button-box">
     <div id="btn"></div>
     <button type="button" class="toggle-btn" onclick="Loging()">Log In</button>
     <button type="button" class="toggle-btn" onclick="Register()">Register</button>
   </div>
-  
+
 
   <form id="loging" action='index.php' method='post' class="input-group modal-content animate">
     <input id="login-username" name="email" type="text" class="" required>
@@ -18,16 +18,32 @@
     <input id="login-pw" type="text" name="password" class="input-field" required>
     <label class="" for="login-pw">Password</label>
     <br><br>
-    <input type="checkbox" class="check-box">
-    <span><p>Remember password</p>
-    </span>
+    <div class="col s12 m12 l12">
+
+      <input type="checkbox" name="check" id="GFG"
+                    value="1" >
+      <span style="font-size: 10px; ">Remember password</span>
+    </div>
+    <script>
+      function myGeeks() {
+                var g = document.getElementById("GFG").required
+                        = "false";
+                          
+                document.getElementById("sudo").innerHTML
+                        = "The value of the required attribute"
+                          + " was changed to " + g;
+            }
+  </script>
+
     <br><br>
     <button type="submit" name="login" class="submit-btn">Log In</button>
   </form>
 
   <form action="index.php" method="post" id="register" class="input-group register">
     <input type="text" class=" col s9 input-field" name="uname" required>
-    <label class="col s3" for="login-username"><p>User Id</p></label>
+    <label class="col s3" for="login-username">
+      <p>User Id</p>
+    </label>
     <input type="email" class="input-field" name="email" required>
     <label class="" for="login-username">Email</label>
     <input type="text" class="input-field" name="psw" required>
@@ -35,10 +51,10 @@
     <input type="text" class="input-field" name="psw-repeat" required>
     <label class="" for="login-username">Re-Enter Password</label>
     <br>
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <br>    
+    <p style="font-size: 12px;">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <br>
     <button type="submit" name="signup" class="submit-btn">Register</button>
-    <br>    <br>
+    <br> <br>
   </form>
 </div>
 

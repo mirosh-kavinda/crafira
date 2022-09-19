@@ -41,7 +41,9 @@
 }
 
 body {
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  background-color: #FFDEE9;
+  background-image: linear-gradient(90deg, #FFDEE9 0%, #B5FFFC 100%);
+  
 }
 
 @-webkit-keyframes fadeIn {
@@ -107,17 +109,19 @@ nav.nav-wrappper{
 
 .carousel .carousel-item {
   cursor: grab;
-  width: 500px;
+  width: 550px;
 }
 
 .carousel .carousel-item:active {
   cursor: grabbing;
   height: 1rem;
+
 }
 
 .carousel .carousel-item img {
   width: 90%;
-  height: 50vh;
+  height: 60vh;
+  border-radius: 10px;
 }
 
 .carousel .carousel-item h3 {

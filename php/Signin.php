@@ -9,8 +9,11 @@ if ($con->connect_error) {
     $firstName = $_POST["uname"];
     $email = $_POST["email"];
     $password = $_POST["psw"];
+    // $password_re=$_POST["psw-repeat"];
 
+    //  if ($password==$pasword_reset){
 
+    //  } 
     $sql = "INSERT INTO users (firstName,email,password) VALUES (?,?,?)";
     $stmnt = $con->prepare($sql);
     $result = $stmnt->execute([$firstName, $email, $password]);
