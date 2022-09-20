@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" placeholder="H.G. Mirosh Kavinda">
+                </div>
+                <div class="dd">
+                    <label for="Shipping">Choose Shipping Method:</label>
+
+                    <select id="Shipping">
+                        
+                    <option value="ES">Economy shipping</option>
+                    <option value="SS">Standard shipping</option>
+                    <option value="ESH">Expedided shipping</option>
+                    
+                    </select>
+                                    
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="No or House Name-Street-Village">
+                </div>
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input type="text" placeholder="Matara">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Province :</span>
+                        <input type="text" placeholder="Southern">
+                    </div>
+                    <div class="inputBox">
+                        <span>Postal code :</span>
+                        <input type="text" placeholder="81000">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="dd">
+                    <label for="card">Card Type:</label>
+
+                    <select id="card">
+                    <option value="Vsa">Visa</option>
+                    <option value="Mas">Master</option>
+
+                    </select>
+                </div>
+
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" placeholder="Mirosh kavinda">
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="text" placeholder="1111 2222 3333 4444">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp Month/year :</span>
+                        <input type="number/number" placeholder="10/24">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="1234">
+                    </div>
+                </div>
+
+                <div class="inputBox">
+                    <span>Total Price :</span>
+                    <input type="text" placeholder="">
+                </div>
+
+            </div>
+    
+        </div>
+
+        <input type="submit" value="Proceed To Checkout" class="submit-btn">
+
+        <input type="submit" value="Cancel Order" class="submit-btn">
+
+    </form>
+
+</div>    
+    
+</body>
+</html>
