@@ -1,7 +1,7 @@
-/* * Login Modal (Sachith)  */ */
+/*  Login and register component (Sachith)  */ 
 
 .form-box {
-
+ font-size: small;
   height: 600px;
   width: auto;
   position: absolute;
@@ -17,7 +17,6 @@
   margin-top:5px;
   width: 220px;
   margin: 35px ;
-  /* */
   position: relative;
   box-shadow: 0 0 20px 9px #0101011f;
   border-radius: 30px;

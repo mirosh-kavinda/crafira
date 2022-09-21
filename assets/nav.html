@@ -1,63 +1,64 @@
-
-<!-- Modal content -->
+<!-- user login custom popup box -->
 <div id="modal1" class="modal modal-style">
   <div class="modal-header ">
     <div id="login-placeholder"></div>
   </div>
 </div>
 
-<nav class=" nav-extended navbar-fixed navigation">
-  <div class="row nav-wrapper">
-    <a call_type="home" href="#" class=" col s8 m3 l2 btn_load_screen "><img src="images/logo1.png"
-        class="logopng responsive-img"></a>
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger right m1">
+<!-- navigation bar -->
+<nav class=" nav-extended navbar-fixed navigation ">
+  <div class="row nav-wrapper   ">
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger col  right ">
       <div id="menu-btn" class="fas fa-bars " style="font-size:22px;"></div>
-    </a>
+    </a></li>
+    
+    <a call_type="home" href="#" class=" col s8 m3 l4 btn_load_screen "><img src="images/logo1.png"
+        class="logopng responsive-img"></a>
 
-    <form action="" class="col s7 m5 l7 search-box ">
-    
-        <input id="search " type="search" class="search-bar center" required>
-        <label class="label-icon " for="search"> <a id="search-btn " class="fas fa-search  black-text  right"
-            style="font-size:16px;"></a></label>
-    
+    <form action="" class="col s6 m4 l4 search-box">
+      <input id="search " type="search" class="search-bar " required>
+      <label class="label-icon " for="search"> <a id="search-btn " class="fas fa-search  black-text "
+          style="font-size:16px;"></a></label>
     </form>
-
-    <ul class=" icons col s5 m4 l3">
-      </a></li>
-      <li id="signin"> <a class=" modal-trigger"  href="#modal1"> Sign in</a></li>
-      <li  id ="signout"> <a class=" href="index.php" > Sign Out</a></li>
+    
+    <ul class=" icons col s6 m3 l3  ">
+      <li id="signin"> <a class=" modal-trigger" href="#modal1"> Sign in</a></li>
+      <li id="signout"> <a href="php/logout.php"> Sign Out</a></li>
       <li><a href="cart.html" class="fas fa-shopping-cart" style="font-size:22px" ;></a> </li>
+      <li>
     </ul>
 
 
   </div>
-  <div class="nav-content">
-    <ul class="tabs tabs-transparent center">
-      <li class="tab"><a class=" btn_load_screen "  call_type="jewel"href="#">Jewelry and accessories</a></li>
-      <li class="tab"><a class=" btn_load_screen " call_type="cloth"href="#">Clothing and shoes</a></li>
+
+  <div class="nav-content container">
+    <ul class="tabs tabs-transparent ">
+      <li class="tab"><a class=" btn_load_screen " call_type="jewel" href="#">Jewelry and accessories</a></li>
+      <li class="tab"><a class=" btn_load_screen " call_type="cloth" href="#">Clothing and shoes</a></li>
       <li class="tab "><a class=" btn_load_screen " call_type="live" href="#">Home and living</a></li>
-      <li class="tab"><a class=" btn_load_screen " call_type="wed"href="#">Wedding and party</a></li>
-      <li class="tab "><a class=" btn_load_screen "  call_type="toy"href="#">Toys and Entertainment</a></li>
-      <li class="tab"><a class=" btn_load_screen "  call_type="art"href="#">Art and Collectibles</a></li>
+      <li class="tab"><a class=" btn_load_screen " call_type="wed" href="#">Wedding and party</a></li>
+      <li class="tab "><a class=" btn_load_screen " call_type="toy" href="#">Toys and Entertainment</a></li>
+      <li class="tab"><a class=" btn_load_screen " call_type="art" href="#">Art and Collectibles</a></li>
     </ul>
   </div>
 </nav>
 
 <ul id="mobile-demo" class="sidenav">
-  <li ><a href="index.html">All Categories</a></li>
-  <li ><a href="Jew&Acc.html">Jewelry and accessories</a></li>
-  <li ><a href="Clo&Shoe.html">Clothing and shoes</a></li>
-  <li ><a href="Home&liv.html">Home and living</a></li>
-  <li ><a href="Wedding&part.html">Wedding and party</a></li>
-  <li ><a href="Toy&Entertain.html">Toys and Entertainment</a></li>
-  <li ><a href="Art&Collect.html">Art and Collectibles</a></li>
+  <li><a href="index.html">All Categories</a></li>
+  <li><a href="Jew&Acc.html">Jewelry and accessories</a></li>
+  <li><a href="Clo&Shoe.html">Clothing and shoes</a></li>
+  <li><a href="Home&liv.html">Home and living</a></li>
+  <li><a href="Wedding&part.html">Wedding and party</a></li>
+  <li><a href="Toy&Entertain.html">Toys and Entertainment</a></li>
+  <li><a href="Art&Collect.html">Art and Collectibles</a></li>
 </ul>
-<script> 
-  $(document).ready(function(){
+
+
+<script>
+  $(document).ready(function () {
     $('.sidenav').sidenav();
   });
 
-  
   setTimeout(function () {
     $('loader_bg').fadeToggle();
   }, 1500);

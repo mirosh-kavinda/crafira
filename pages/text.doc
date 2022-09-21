@@ -1,0 +1,19 @@
+   <!-- <script>
+                        var parent_elem = document.createElement("div");
+                        var elem = document.createElement("img");
+                        var count = 4;
+
+                        var root=document.getElementsByClassName("small-img-row");
+                        parent_elem.appendChild(elem);
+                        root.append(parent_elem);
+                        console.log('hello0');
+                        // parent_elem.class = 'small-img-col';
+                        // parent_elem.id = 'parent_elem';
+                        // document.getElementById("parent_elem").appendChild("elem");
+                        // elem.src = 'images/Catogery/Brassware/1/1.jpg';
+                        // elem.class = 'small-img';
+                        //    for (let i = 0; i < count ; i++) {
+
+
+                        //     }
+                    </script>

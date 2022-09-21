@@ -1,11 +1,35 @@
-<h1 class='center'>Clarifai</h1>
+<h1 class='center'>Crafira </h1>
+<h3 class='center'>Market place for your home made items! </h3>
+
 <p>This platform for small business owners who hadn't chance to compete with global and local market</p>
 
 
+## To run website you need to follow below mentioned steps
 
-## You need to install XAMP software for run database server
+### 1 .You need to install XAMPP software (we are using Apache and MYSQL )
+### 2 .After installation,place CRAFIRA project folder on  XAMPP installed directory , 
+        "C:\xampp\htdocs"
+### 3. Start the Apache and MYSQL servers on XAMPP dashboard.
+### 4. Click on Admin button on MySQL row.
+### 5. After pop up the Php my admin dashboard withing webbrowser
+### 6. Import our "CRAFIRA " data base from CRAFIRA "database" directory.
+### 7. Open New tab on Browser and type following and enter:
+        localhost/CRAFIRA/index.php
 
-## Further we shared the database file with this(which exported from XAMP)
+### we shared the database file with this(which exported from MySQL)
+
+### directory Tree goes like follows
+
+    _CRAFIRA
+     _assets
+        _footer.html
+        _login.html
+        _nav.html
+     _css
+        _index.css
+        _nav.css
+        _
+     
 
 ## Supported Browsers:
 - Chrome 35+
@@ -15,14 +39,9 @@
 - Edge
 - IE 11+
 
-## Changelog
-For changelogs, check out [the Releases section of materialize](https://github.com/Dogfalo/materialize/releases) or the [CHANGELOG.md](CHANGELOG.md).
 
-## Testing
-We use Jasmine as our testing framework and we're trying to write a robust test suite for our components. If you want to help, [here's a starting guide on how to write tests in Jasmine](CONTRIBUTING.md#jasmine-testing-guide).
-
-## Contributing
-Check out the [CONTRIBUTING document](CONTRIBUTING.md) in the root of the repository to learn how you can contribute. You can also browse the [help-wanted](https://github.com/Dogfalo/materialize/labels/help-wanted) tag in our issue tracker to find things to do.
 
 ## Copyright and license
-Code Copyright 2018 Materialize. Code released under the MIT license.
+Code Copyright 2022. Code released under the MIT license.
+MSE GROUP 
+

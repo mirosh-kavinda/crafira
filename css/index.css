@@ -1,7 +1,7 @@
-/* general */
+/* general  font settings and colors*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -15,35 +15,9 @@
   justify-content: center;
 }
 
-/* loader component */
-#loader {
-  border: 12px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 12px solid #444444;
-  width: 70px;
-  height: 70px;
-  animation: spin 1000s linear infinite;
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.center-loader {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
 body {
-  background-color: #FFDEE9;
-  background-image: linear-gradient(90deg, #FFDEE9 0%, #B5FFFC 100%);
-  
+  background-color: #ffdee9;
+  background-image: linear-gradient(90deg, #ffdee9 0%, #b5fffc 100%);
 }
 
 @-webkit-keyframes fadeIn {
@@ -75,28 +49,23 @@ body {
   display: none;
 }
 .icons {
-  margin-top: 10px;
+  margin-top: 0px;
 }
-nav.nav-wrappper{
+nav.nav-wrappper {
   margin-bottom: 0px;
 }
 .logopng {
   mix-blend-mode: lighten;
   width: 180px;
-  margin: 13px 13px;
-  padding: 0px;
+
 }
 
 .search-box {
-  /* Auto layout */
   display: flex;
-  flex-direction: row;
   align-items: center;
-  height: 37px;
-  margin-top: 28px;
   background: #fbfbfb;
   border: 1px solid #ebebeb;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 /* carousel*/
@@ -108,14 +77,13 @@ nav.nav-wrappper{
 }
 
 .carousel .carousel-item {
-  cursor: grab;
+  cursor: pointer;
   width: 550px;
 }
 
 .carousel .carousel-item:active {
   cursor: grabbing;
   height: 1rem;
-
 }
 
 .carousel .carousel-item img {
@@ -196,59 +164,6 @@ nav.nav-wrappper{
   font-size: 44px;
   font-weight: 500;
 }
-@media only screen and (max-width: 992px) {
-  .nav-content {
-    display: none;
-  }
-  .search-box {
-    height: 23px;
-    margin-top: 19px;
-  }
-  .logopng {
-    margin: 5px 13px;
-    padding: 10px;
-  }
-  .circle {
-    width: 100px;
-    height: 100px;
-  }
-  .modal {
-    top: 1% !important;
-    max-height: 9;
-  }
-  .heading {
-    font-size: 38px;
-    font-weight: 500;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .circle {
-    width: 100px;
-    height: 100px;
-  }
-  .search-box {
-    height: 30px;
-    margin-top: 18px;
-  }
-  .logopng {
-    margin: -10px 40px;
-    width: 200px;
-    padding: 10px;
-  }
-  .modal {
-    top: 3% !important;
-    max-height: 98% !important;
-  }
-  .heading {
-    font-size: 29px;
-    font-weight: 500;
-  }
-
-  .cards-container {
-    top: 0px;
-  }
-}
 
 /* footer */
 
@@ -276,4 +191,72 @@ nav.nav-wrappper{
 
 *:focus {
   outline: 0;
+}
+
+/* responsive works done here */
+
+@media only screen and (max-width: 600px) {
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+  .search-box {
+    height: 45px;
+    padding: 10px;
+  }
+  .logopng {
+    margin: 8px 20px;
+    width: 230px;
+  
+  }
+  .modal {
+    top: 3% !important;
+    max-height: 98% !important;
+  }
+  .heading {
+    font-size: 29px;
+    font-weight: 500;
+  }
+
+  .cards-container {
+    top: 0px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-content {
+    display: none;
+  }
+  .search-box {
+    height: 55px;
+    margin-top: 19px;
+  }
+  .logopng {
+    margin: 5px 10px;
+  }
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+  .modal {
+    top: 1% !important;
+    max-height: 9;
+  }
+  .heading {
+    font-size: 50px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .nav-content {
+    display: none;
+  }
+  .search-box {
+    height: 45px;
+    margin-top: 10px;
+  }
+  .logopng {
+    margin-left: 150px;
+  }
 }
