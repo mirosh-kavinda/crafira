@@ -1,25 +1,38 @@
 <!-- login css file load  -->
 <link rel="stylesheet" href="css/Signin.css" />
 
-<a href="#!" class=" modal-action modal-close"><i style="font-size:22px; color: black;padding: 1px 0px;z-index: 100;"
-    class='far fa-window-close right'></i></a>
 
-    <div class="form-box">
+<div class="form-box">
+  <a href="#!" class=" modal-action modal-close"><i style="font-size:22px; color: black;padding: 1px 0px;z-index: 100;"
+      class='far fa-window-close right'></i></a>
   <h5 class=" center col s10 m10 l10 " style="font-weight:700;">Welcome to Crafira</h5>
- 
+
+
   <!-- button box -->
   <div class="button-box">
     <div id="btn"></div>
     <button type="button" class="toggle-btn" onclick="Loging()">Log In</button>
     <button type="button" class="toggle-btn" onclick="Register()">Register</button>
   </div>
+  <!-- script for show and hide password -->
+  <script>
+    function showPw() {
+      var eye = document.getElementById("login-pw")
+      if (eye.type === "password") {
+        eye.type = "text";
+      } else {
+        eye.type = "password";
+      }
+    }
+  </script>
 
   <!-- login form code snipet start -->
   <form id="loging" action='index.php' method='post' class="input-group modal-content animate">
     <input id="login-username" name="email" type="text" class="" required>
     <label class="" for="login-username">User Email</label>
-    <input id="login-pw" type="text" name="password" class="input-field" required>
+    <input id="login-pw" type="password" name="password" className="input-field  " required>
     <label class="" for="login-pw">Password</label>
+    <a href="#" class="right" onClick="showPw();"><i class="fa fa-eye"></i></a>
     <br><br>
     <div class="col s12 m12 l12">
       <label>
@@ -30,19 +43,22 @@
     <br><br>
     <button type="submit" name="login" class="submit-btn">Log In</button>
   </form>
+
   <!-- login form code snipet stop -->
 
   <!-- register form code snipet stop -->
   <form action="index.php" method="post" id="register" class="input-group register">
     <input type="text" class=" col s9 input-field" name="uname" required>
-    <label class="col s3" for="login-username"><p>First Name</p></label>
+    <label class="col s3" for="login-username">
+      <p>First Name</p>
+    </label>
     <input type="email" class="input-field" name="email" required>
     <label class="" for="login-username">Email</label>
     <input type="password" class="input-field" name="psw" required>
-    <label class="" for="login-username">Enter password</label>
+    <label  for="login-username">Enter password</label>
     <input type="password" class="input-field" name="psw-repeat" required>
     <label class="" for="login-username">Re-Enter Password</label>
-    
+
     <br>
     <div class="col s12 m12 l12">
       <label>
@@ -50,8 +66,8 @@
         <span style="font-size: 10px; "> By creating an account you agree to our <a href="#">Terms & Privacy</a>.</span>
       </label>
     </div>
-   </p>
-  
+    </p>
+
     <button type="submit" name="signup" class="submit-btn">Register</button>
     <br> <br>
   </form>
@@ -72,4 +88,4 @@
     y.style.left = "450px";
     z.style.left = "0px";
   }
-  </script>
+</script>
