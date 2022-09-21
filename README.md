@@ -18,17 +18,23 @@
 
 ### we shared the database file with this(which exported from MySQL)
 
-### directory Tree goes like follows
+### Files in the directories  goes like follows
 
     _CRAFIRA
-     _assets
-        _footer.html
-        _login.html
-        _nav.html
-     _css
-        _index.css
-        _nav.css
-        _
+        _assets
+                _....
+        _css
+                _....
+        _database
+                _....
+        _images
+                _....
+        _js
+                _....
+        _pages
+                _....
+        _php
+                _....
      
 
 ## Supported Browsers:
