@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+// logout function work with this 
 if(isset($_SESSION['ID']))
 {
 	unset($_SESSION["ID"] );
@@ -7,9 +9,9 @@ if(isset($_SESSION['ID']))
 	unset($_SESSION["First_Name"]);
 	unset($_SESSION["Address"] );
 	unset($_SESSION["Telephone"] );
-
+	header("Location: ../index.php");
+	die;
+	
 }
-header("Location: /CRAFIRA/index.php");
-die;
 
 ?>

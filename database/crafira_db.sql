@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 21, 2022 at 10:26 AM
+-- Generation Time: Sep 23, 2022 at 12:16 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -24,42 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
---
-
-CREATE TABLE `cart` (
-  `cartNo` int(11) NOT NULL,
-  `userID` int(11) NOT NULL,
-  `date` date NOT NULL,
-  `itemName` varchar(20) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `Price` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
-  `product_id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL,
-  `price` varchar(6) NOT NULL,
-  `product_count` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `description` varchar(100) NOT NULL,
-  `category` varchar(15) NOT NULL
+  `p_id` int(11) NOT NULL,
+  `p_name` varchar(50) NOT NULL,
+  `p_price` double NOT NULL,
+  `p_variety` int(11) NOT NULL,
+  `p_stock` int(11) NOT NULL,
+  `p_desc` varchar(100) NOT NULL,
+  `p_category` varchar(50) NOT NULL,
+  `p_src` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`product_id`, `name`, `price`, `product_count`, `quantity`, `description`, `category`) VALUES
-(1, 'Anime Bleach Poster ', '250.33', 4, 20, 'Japanese Anime Bleach Poster \r\nKraft Paper Retro Posters \r\nHome Room Store Wall Decor Fans\' ', 'ART_COL'),
-(2, 'Ancient Coins', '500.12', 3, 10, 'Jesus relief commemorative coin Collection Arts Gifts Alloy Souvenir Gold Plated Coin Metal Antique ', 'ART_COL'),
-(3, 'Carved Antique China', '521.0', 5, 12, 'Carved Antique China Dragon Bell Asian Antiques Copper Brass Lotus Buddha Buddhism Arts Statue Clock', 'Brassware');
+INSERT INTO `products` (`p_id`, `p_name`, `p_price`, `p_variety`, `p_stock`, `p_desc`, `p_category`, `p_src`) VALUES
+(1, 'Anime Bleach Poster ', 250.33, 4, 20, 'Japanese Anime Bleach Poster \r\nKraft Paper Retro Posters \r\nHome Room Store Wall Decor Fans\' ', 'ART & COLLECTIBLES', 'images/Category/Art&Col/1/'),
+(2, 'Ancient Coins', 500.12, 3, 10, 'Jesus relief commemorative coin Collection Arts Gifts Alloy Souvenir Gold Plated Coin Metal Antique ', 'ART & COLLECTIBLES', 'images/Category/Art&Col/2/');
 
 -- --------------------------------------------------------
 
@@ -82,24 +67,17 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `firstName`, `email`, `password`, `address`, `telephone`) VALUES
 (1, 'mirosh kavinda', 'mk@gmail.com', '7442', '', ''),
-(2, 'sdfdsfds', 'fsdfds@gmail.com', 'fsdfdsf', '', ''),
-(3, 'dsfsd', 'fdsf@gmail.com', '7442', '', '');
+(4, 'sachith navodya', 'sachi@gmail.com', '7442', '', '');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cart`
---
-ALTER TABLE `cart`
-  ADD PRIMARY KEY (`cartNo`);
-
---
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`product_id`);
+  ADD PRIMARY KEY (`p_id`);
 
 --
 -- Indexes for table `users`
@@ -112,22 +90,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `cart`
---
-ALTER TABLE `cart`
-  MODIFY `cartNo` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,31 +1,35 @@
-<!-- user login custom popup box -->
-<div id="modal1" class="modal modal-style">
-  <div class="modal-header ">
-    <div id="login-placeholder"></div>
-  </div>
-</div>
 
-<!-- navigation bar -->
-<nav class=" nav-extended navbar-fixed navigation ">
-  <div class="row nav-wrapper   ">
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger col  right ">
-      <div id="menu-btn" class="fas fa-bars " style="font-size:22px;"></div>
-    </a></li>
-    <a call_type="home" href="#" class=" col s8 m3 l4 btn_load_screen "><img src="images/logo1.png"
-        class="logopng responsive-img"></a>
-
-    <form action="" class="col s6 m4 l4 search-box">
-      <input id="search " type="search" class="search-bar " required>
-      <label class="label-icon " for="search"> <a id="search-btn " class="fas fa-search  black-text "
-          style="font-size:16px;"></a></label>
-    </form>
-    <ul class=" icons col s6 m3 l3  ">
-      <li id="signin"> <a class=" modal-trigger" href="#modal1"> Sign in</a></li>
-      <li id="signout"> <a href="php/logout.php"> Sign Out</a></li>
-      <li><a href="cart.html" class="fas fa-shopping-cart" style="font-size:22px" ;></a> </li>
-      <li>
-    </ul>
+<div>
+  <!-- login form pop up with  custom popup box load here  -->
+  <div id="modal1" class="modal modal-style">
+    <div class="modal-header ">
+      <div id="login-placeholder"></div>
+    </div>
   </div>
+
+  <!-- navigation bar -->
+  <nav class=" nav-extended navbar-fixed navigation ">
+    <div class="row nav-wrapper   ">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger col  right ">
+        <div id="menu-btn" class="fas fa-bars " style="font-size:22px;"></div>
+      </a></li>
+      <a call_type="home" href="#" class=" col s8 m3 l4 btn_load_screen "><img src="images/logo1.png"
+          class="logopng responsive-img"></a>
+
+      <div class="col s6 m4 l4 search-box">
+        <input id="live_search" autocomplete="off" type="search" class="search-bar form-control"
+          placeholder="Search ...">
+        <label class="label-icon " for="search"> <a id="search-btn " class="fas fa-search  black-text "
+            style="font-size:16px;"></a></label>
+      </div>
+      <ul class=" icons col s6 m3 l3  ">
+        <li id="signin"> <a class=" modal-trigger" href="#modal1"> Sign in</a></li>
+        <li id="signout"> <a href="assets/logout.php"> Sign Out</a></li>
+        <li><a  href="#" id="cart-icon" call_type="cart" href="#" class="btn_load_screen fas fa-shopping-cart"
+            style="font-size:22px" ;> <span class="badge">.</span></a> </li>
+      </ul>
+    </div>
+
     <div class="nav-content ">
       <ul class="tabs tabs-transparent container ">
         <li class="tab"><a class=" btn_load_screen " call_type="jewel" href="#">Jewelry and accessories</a></li>
@@ -36,41 +40,23 @@
         <li class="tab"><a class=" btn_load_screen " call_type="art" href="#">Art and Collectibles</a></li>
       </ul>
     </div>
- 
-</nav>
+  </nav>
 
-<ul id="mobile-demo" class="sidenav">
-  <li><a href="index.html">All Categories</a></li>
-  <li><a href="Jew&Acc.html">Jewelry and accessories</a></li>
-  <li><a href="Clo&Shoe.html">Clothing and shoes</a></li>
-  <li><a href="Home&liv.html">Home and living</a></li>
-  <li><a href="Wedding&part.html">Wedding and party</a></li>
-  <li><a href="Toy&Entertain.html">Toys and Entertainment</a></li>
-  <li><a href="Art&Collect.html">Art and Collectibles</a></li>
-</ul>
+  <!-- sidebar content are here  -->
+  <ul id="mobile-demo" class="sidenav">
+    <li class="tab"><a class=" btn_load_screen " call_type="jewel" href="#">Jewelry and accessories</a></li>
+    <li class="tab"><a class=" btn_load_screen " call_type="cloth" href="#">Clothing and shoes</a></li>
+    <li class="tab "><a class=" btn_load_screen " call_type="live" href="#">Home and living</a></li>
+    <li class="tab"><a class=" btn_load_screen " call_type="wed" href="#">Wedding and party</a></li>
+    <li class="tab "><a class=" btn_load_screen " call_type="toy" href="#">Toys and Entertainment</a></li>
+    <li class="tab"><a class=" btn_load_screen " call_type="art" href="#">Art and Collectibles</a></li>
+  </ul>
+  <div id="searchresult"></div>
 
+</div>
 
-<script>
-  $(document).ready(function () {
-    $('.sidenav').sidenav();
-  });
+<!-- navigation bar scripts -->
+<script type="text/javascript" src="js/NavigationBar.js"></script>
 
-  setTimeout(function () {
-    $('loader_bg').fadeToggle();
-  }, 1500);
-
-  $(document).ready(function () {
-    $('.modal').modal({
-      opacity: 1,
-      preventScrolling: true,
-      dismissible: false,
-      closeIcon: true
-    });
-
-  });
-
-  $(function () {
-    $("#login-placeholder").load("assets/login.html");
-  });</script>
 
 <!--Navigation Bar code end-->

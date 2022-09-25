@@ -1,4 +1,4 @@
-
+<!-- our database load with this code -->
 <?php
 $con = new mysqli("localhost", "root", "", "Crafira_db");
 

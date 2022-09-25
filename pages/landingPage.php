@@ -2,56 +2,47 @@
 <div>
     <link rel="stylesheet" href="css/landingPage.css" />
     <p class="center heading">Fresh finds fit for cozy season.</p>
-    <script type="text/javascript" src="js/Carousel.js">   </script>
-
+    <script type="text/javascript" src="js/Carousel.js"> </script>
 
     <div class="carousel ">
-        <a href='#' call_type="product" class="carousel-item   btn_load_screen ">
-            <img src="images/carousel1.jpg" class="responsive-image">
+        <?php
+        include("../assets/db.php");
+        $query = $con->prepare("SELECT * FROM products ORDER BY p_id ASC");
+        $query->execute();
+        $result = $query->get_result();
 
-        </a>
-        <a href="#" class="carousel-item  ">
-            <img src="images/carousel2.jpg" class="responsive-image">
+        if (mysqli_num_rows($result) > 0) {
 
-        </a>
-        <a href="#" class="carousel-item  ">
-            <img src="images/carousel3.jpg" class="responsive-image">
-
-        </a>
-        <a href="#" class="carousel-item  ">
-            <img src="images/carousel4.jpg" class="responsive-image">
-
-        </a>
-        <a href="#" class="carousel-item  ">
-            <img src="images/carousel5.jpg" class="responsive-image">
-
-        </a>
-        <a href="#" class="carousel-item  ">
-            <img src="images/background1.jpg" class="responsive-image">
-
-        </a>
+            while ($row = mysqli_fetch_array($result)) {
+                // for ($i; $i <= $row['p_variety']; $i++) {
+        ?>
+                <a call_type="product" class="carousel-item   btn_load_screen ">
+                    <img src="<?php echo $row["p_src"]; ?>/1.jpg" class="responsive-image">
+            <?php
+            }
+        }
+            ?>
     </div>
-
 
     <!-- Scroll icon animation-->
     <div class=" icon-scroll"></div>
     <br><br>
 
     <!--list container-->
-
     <h1 class="center heading">Popular Crafts right now</h1>
-
     <div class="grid-container">
-        <div class="grid-item item1"><img src="images/carousel1.jpg" class="responsive-img "></div>
-        <div class="grid-item item2"><img src="images/carousel2.jpg" class="responsive-img "></div>
-        <div class="grid-item item3"><img src="images/carousel3.jpg" class="responsive-img "></div>
-        <div class="grid-item item4"><img src="images/carousel4.jpg" class="responsive-img "></div>
-        <div class="grid-item item5"><img src="images/carousel5.jpg" class="responsive-img "></div>
-        <div class="grid-item item6"><img src="images/carousel1.jpg" class="responsive-img "></div>
-        <div class="grid-item item6"><img src="images/carousel2.jpg" class="responsive-img "></div>
-        <div class="grid-item item6"><img src="images/carousel3.jpg" class="responsive-img "></div>
-        <div class="grid-item item6"><img src="images/carousel4.jpg" class="responsive-img "></div>
-        <div class="grid-item lastitem"><img src="images/carousel5.jpg" class="responsive-img "></div>
+        
+    
+    <div class="grid-item item1"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
+        <div class="grid-item item2"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
+        <div class="grid-item item3"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
+        <div class="grid-item item4"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
+        <div class="grid-item item5"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
+        <div class="grid-item item6"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
+        <div class="grid-item item6"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
+        <div class="grid-item item6"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
+        <div class="grid-item item6"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
+        <div class="grid-item lastitem"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
     </div>
     <!-- shop list -->
 
@@ -60,49 +51,49 @@
         <div class="row center">
             <div class="col s6 m4 l3">
                 <a href="#" id='dahami'>
-                    <img src="images/background1.jpg" class="circle">
+                    <img src="images/ProductView/3.jfif" class="circle">
                     <h5>Dahami shop</h5>
                 </a>
             </div>
             <div class="col s6 m4 l3">
                 <a href="#" id='dahami'>
-                    <img src="images/background1.jpg" class="circle">
+                    <img src="images/ProductView/3.jfif" class="circle">
                     <h5>Dahami shop</h5>
                 </a>
             </div>
             <div class="col s6 m4 l3">
                 <a href="#" id='dahami'>
-                    <img src="images/background1.jpg" class="circle">
+                    <img src="images/ProductView/3.jfif" class="circle">
                     <h5>Dahami shop</h5>
                 </a>
             </div>
             <div class="col s6 m4 l3">
                 <a href="#" id='dahami'>
-                    <img src="images/background1.jpg" class="circle">
+                    <img src="images/ProductView/3.jfif" class="circle">
                     <h5>Dahami shop</h5>
                 </a>
             </div>
             <div class="col s6 m4 l3">
                 <a href="#" id='dahami'>
-                    <img src="images/background1.jpg" class="circle">
+                    <img src="images/ProductView/1.jfif" class="circle">
                     <h5>Dahami shop</h5>
                 </a>
             </div>
             <div class="col s6 m4 l3">
                 <a href="#" id='dahami'>
-                    <img src="images/background1.jpg" class="circle">
+                    <img src="images/ProductView/3.jfif" class="circle">
                     <h5>Dahami shop</h5>
                 </a>
             </div>
             <div class="col s6 m4 l3">
                 <a href="#" id='dahami'>
-                    <img src="images/background1.jpg" class="circle">
+                    <img src="images/ProductView/3.jfif" class="circle">
                     <h5>Dahami shop</h5>
                 </a>
             </div>
             <div class="col s6 m4 l3">
                 <a href="#" id='dahami'>
-                    <img src="images/background1.jpg" class="circle">
+                    <img src="images/ProductView/3.jfif" class="circle">
                     <h5>Dahami shop</h5>
                 </a>
             </div>
@@ -110,7 +101,7 @@
     </div>
 </div>
 
-<!--What is the crafira?-->
+<!--What is the crafira content?-->
 <div class="row ">
     <h1 class="center heading ">What is Crafira?</h1>
     <br><br>

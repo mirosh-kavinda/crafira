@@ -15,7 +15,7 @@ $("a").click(function(){
   alert("The paragraph was clicked.");
 });
 
-// Back to top button 
+// Back to top scrolling button
 $(window).scroll(function() {
   if ($(this).scrollTop() > 200) { //use `this`, not `document`
       $('.icon-scroll').css({

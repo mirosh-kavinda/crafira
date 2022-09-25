@@ -1,5 +1,5 @@
 <?php
-
+// this php file use for load content between footer and nav bar 
 if(isset($_GET['call_type']))
   {
     $call_type = $_GET['call_type'];
@@ -9,7 +9,7 @@ if(isset($_GET['call_type']))
       echo json_encode(array(
         'status'=>'success',
         'title'=> 'Crafira',
-        'url' => 'pages/landingPage.html',
+        'url' => 'pages/landingPage.php',
         
       ));
     }
@@ -64,7 +64,7 @@ if(isset($_GET['call_type']))
       echo json_encode(array(
         'status'=>'success',
         'title'=> 'Art & Collectibles',
-        'url' => 'pages/Toy&Entertain.html',
+        'url' => 'pages/Art&Collect.html',
         
       ));
     }
@@ -73,10 +73,20 @@ if(isset($_GET['call_type']))
       echo json_encode(array(
         'status'=>'success',
         'title'=> 'Product view',
-        'url' => 'pages/productView.php',
+        'url' => 'assets/productView.php',
         
       ));
     }
+    else if($call_type == "cart")
+    {
+      echo json_encode(array(
+        'status'=>'success',
+        'title'=> 'Cart',
+        'url' => 'assets/Cart.php',
+        
+      ));
+    }
+
     
   }
 

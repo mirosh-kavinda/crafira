@@ -1,0 +1,11 @@
+mee folder eke tiyana css file tika hadanna oni eke passe ekata link kran
+
+product view eke css tika productView.css ekaata
+  \\\  productView.php --> productView.css
+liveserach kiyana eke ewa seach.css
+\\\ livesearch.php ---> search.css
+
+cart ekai chekout ekai ekama file eke tiyenne
+   \\\ Cart.php ----> cart.css /checkout.css ekatay
+
+

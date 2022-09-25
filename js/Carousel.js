@@ -5,9 +5,7 @@ $(document).ready(function () {
             indicators: false
         }
     );
-
 });
-
 const elems = document.querySelector('.carousel');
 const duration = 3000; //milliseconds 
 
