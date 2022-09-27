@@ -18,7 +18,7 @@ if(isset($_GET['call_type']))
       echo json_encode(array(
         'status'=>'success',
         'title'=> 'Jewelery & Acc',
-        'url' => 'pages/Jew&Acc.html',
+        'url' => 'pages/Jew&Acc.php',
         
       ));
     }
@@ -27,7 +27,7 @@ if(isset($_GET['call_type']))
       echo json_encode(array(
         'status'=>'success',
         'title'=> 'Clothing & Shoes',
-        'url' => 'pages/Clo&Shoe.html',
+        'url' => 'pages/Clo&Shoe.php',
         
       ));
     }
@@ -36,7 +36,7 @@ if(isset($_GET['call_type']))
       echo json_encode(array(
         'status'=>'success',
         'title'=> 'Home & living',
-        'url' => 'pages/Home&liv.html',
+        'url' => 'pages/Home&liv.php',
         
       ));
     }
@@ -45,7 +45,7 @@ if(isset($_GET['call_type']))
       echo json_encode(array(
         'status'=>'success',
         'title'=> 'Wedding & party',
-        'url' => 'pages/Wedding&part.html',
+        'url' => 'pages/Wedding&part.php',
         
       ));
     }
@@ -54,7 +54,7 @@ if(isset($_GET['call_type']))
       echo json_encode(array(
         'status'=>'success',
         'title'=> 'Toys & Entertainment',
-        'url' => 'pages/Toy&Entertain.html',
+        'url' => 'pages/Toy&Entertain.php',
         
       ));
     }
@@ -64,7 +64,7 @@ if(isset($_GET['call_type']))
       echo json_encode(array(
         'status'=>'success',
         'title'=> 'Art & Collectibles',
-        'url' => 'pages/Art&Collect.html',
+        'url' => 'pages/Art&Collect.php',
         
       ));
     }
@@ -89,6 +89,5 @@ if(isset($_GET['call_type']))
 
     
   }
-
 ?>
 

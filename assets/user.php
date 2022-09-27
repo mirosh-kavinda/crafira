@@ -26,10 +26,13 @@ if (isset($_POST["login"])) {
       $_SESSION["Address"] = $data['address'];
       $_SESSION["Telephone"] = $data['telephone'];
     } else {
-      echo '<script>alert("Invalid password Try again !")</script>';
+      // echo "<script> M.toast({html: ''});</script>";
+
+
     }
   } else {
-    echo '<script>alert("Invalid email or password !")</script>';
+    // echo "<script> M.toast({html: 'Invalid email or password !'});</script>";
+    echo "<script> Materialize.toast({html: 'I am a toast!'})</script>";
   }
 }
 
@@ -58,16 +61,16 @@ else if (isset($_POST['signup'])) {
       echo '<script>alert("Error in record creation!")</script>';
     }
   }
-
-
-} 
+}
 // Product add to cart function work in here
 else if (isset($_POST['add'])) {
   if (isset($_SESSION["cart"])) {
     $item_array_id = array_column($_SESSION["cart"], "product_id");
+    echo '<style>#badge{display:block !important;}</style>';
 
     if (!in_array($_GET["id"], $item_array_id)) {
       $count = count($_SESSION["cart"]);
+
       $item_array = array(
         'product_id' => $_GET["id"],
         'item_name' => $_POST["hidden_name"],
@@ -80,8 +83,7 @@ else if (isset($_POST['add'])) {
     } else {
       echo '<script>alert("Product is already Added to Cart")</script>';
     }
-  } 
-  else {
+  } else {
     $item_array = array(
       'product_id' => $_GET["id"],
       'item_name' => $_POST["hidden_name"],
@@ -101,6 +103,27 @@ else if (isset($_POST['add'])) {
 
         unset($_SESSION["cart"][$keys]);
         echo '<script>alert("Product has been Removed...!")</script>';
+      }
+    }
+  }
+} else if (isset($_POST["checkout_proceed"])) {
+  if (isset($_SESSION['ID'])) {
+    $address = $_POST["address"];
+    $city = $_POST["city"];
+    $province = $_POST["province"];
+    $postal = $_POST["postal"];
+
+    $stmt = $con->prepare("select * from users where id=?");
+    $stmt->bind_param("s", $_SESSION['ID']);
+    $stmt->execute();
+    $stmt_result = $stmt->get_result();
+    if ($stmt_result->num_rows > 0) {
+      $sql = "INSERT INTO users (address,telephone) VALUES (?,?)";
+      $stmnt = $con->prepare($sql);
+      $result = $stmnt->execute([$address, $postal]);
+      if ($result) {
+
+        echo '<script>alert("hello")</script>';
       }
     }
   }

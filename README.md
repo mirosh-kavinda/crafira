@@ -9,15 +9,18 @@
 ### 1 .You need to install XAMPP software (we are using Apache and MYSQL )
 ### 2 .After installation,place CRAFIRA project folder on  XAMPP installed directory , 
         "C:\xampp\htdocs"
-### 3. Start the Apache and MYSQL servers on XAMPP dashboard.
-### 4. Click on Admin button on MySQL row.
-### 5. After pop up the Php my admin dashboard withing webbrowser
-### 6. Import our "CRAFIRA " data base from CRAFIRA "database" directory.
-### 7. Open New tab on Browser and type following and enter:
+### 3. Rename the root folder name as 'CRAFIRA'
+### 4. Start the Apache and MYSQL servers on XAMPP dashboard.
+### 5. Click on Admin button on MySQL row.
+### 6. After pop up the Php my admin dashboard withing webbrowser
+### 7. create new database as "crafira_db" 
+### 8. Select newly created database and go to import tab on tool bar
+### 8. Import our "crafira_db.sql " data base file from CRAFIRA "database" folder in CRAFIRA project directory.
+### 9. Open New tab on Browser and type following and enter:
         localhost/CRAFIRA/index.php
 
 ### we shared the database file with this(which exported from MySQL)
-
+        CRAFIRA/databases/crafira_db.sql
 ### Files in the directories  goes like follows
 
     _CRAFIRA

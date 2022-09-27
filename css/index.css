@@ -78,13 +78,13 @@ nav.nav-wrappper {
   
   
   
-  #cart-icon .badge {
+  #badge {
     position: absolute;
     display: none;
-    top: 3px;
-    right: -10px;
-   width: 5px;
-    border-radius: 200%;
+    top: 4px;
+    right: 10px;
+   width: 20px;
+    border-radius: 100%;
     background: red;
     color: white;
   }
@@ -203,19 +203,21 @@ nav.nav-wrappper {
 .heading {
   font-size: 44px;
   font-weight: 500;
+  color: bla;
 }
 
 /* footer */
 
 .footer {
   background: #373f51;
-  bottom: 0px;
+  bottom: 10px;
 }
 
 .footer-bottom {
   background: #1b1b1e;
   width: cover;
   text-align: center;
+  height: 30px;
 }
 .loging {
   width: 60px;

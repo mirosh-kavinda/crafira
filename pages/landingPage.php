@@ -1,4 +1,8 @@
 <!--Carousel Content-->
+<?php
+include("../assets/db.php");
+
+?>
 <div>
     <link rel="stylesheet" href="css/landingPage.css" />
     <p class="center heading">Fresh finds fit for cozy season.</p>
@@ -6,7 +10,6 @@
 
     <div class="carousel ">
         <?php
-        include("../assets/db.php");
         $query = $con->prepare("SELECT * FROM products ORDER BY p_id ASC");
         $query->execute();
         $result = $query->get_result();
@@ -14,10 +17,11 @@
         if (mysqli_num_rows($result) > 0) {
 
             while ($row = mysqli_fetch_array($result)) {
-                // for ($i; $i <= $row['p_variety']; $i++) {
         ?>
-                <a call_type="product" class="carousel-item   btn_load_screen ">
-                    <img src="<?php echo $row["p_src"]; ?>/1.jpg" class="responsive-image">
+
+                <a call_type="product" class="carousel-item  btn_load_screen " p_atr="<?php echo $row["p_id"]; ?>">
+                <img src="<?php echo $row["p_src"]; ?>/1.jpg">
+                </a>
             <?php
             }
         }
@@ -29,21 +33,31 @@
     <br><br>
 
     <!--list container-->
-    <h1 class="center heading">Popular Crafts right now</h1>
-    <div class="grid-container">
-        
-    
-    <div class="grid-item item1"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
-        <div class="grid-item item2"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
-        <div class="grid-item item3"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
-        <div class="grid-item item4"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
-        <div class="grid-item item5"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
-        <div class="grid-item item6"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
-        <div class="grid-item item6"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
-        <div class="grid-item item6"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
-        <div class="grid-item item6"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
-        <div class="grid-item lastitem"><img src="images/ProductView/2.jfif" class="responsive-img "></div>
+    <h1 class="center">Popular Crafts right now</h1>
+    <div class=" card-container">
+        <div class="row">
+            <?php
+            $query = $con->prepare("SELECT * FROM products ORDER BY p_id ASC");
+            $query->execute();
+            $result = $query->get_result();
+
+            if (mysqli_num_rows($result) > 0) {
+                $count = 1;
+                for ($count; $count <= 8; $count++) {
+                    while ($row = mysqli_fetch_array($result)) {
+
+            ?>
+
+                        <img class="materialboxed   col s6 m4 l3" height="300px" width="300px"src="<?php echo $row["p_src"]; ?>/3.jpg">
+
+            <?php
+                    }
+                }
+            }
+            ?>
+        </div>
     </div>
+
     <!-- shop list -->
 
     <h1 class="center heading">shops</h1>

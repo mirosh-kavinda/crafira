@@ -1,0 +1,334 @@
+
+/*-------------------------------------Cart CSS  eshadi------------------------------------*/
+
+.mg4-container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.mg4-row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.mg4-col-2{
+    flex-basis: 50%;
+    min-width: 250px;
+}
+.mg4-col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.mg4-col-2 h1{
+    font-size: 35px;
+    line-height: 37px;
+    margin: 25px 0;
+}
+
+.mg4-small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.mg4-col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.mg4-col-4 img{
+    width: 100%;
+}
+
+.mg4-col-4 p{
+    font-size: 14px;
+}
+.mg4-rating .fas{
+    color: #437c90;
+}
+.mg4-rating .far{
+    color: #437c90;
+}
+
+.mg4-col-4:hover{
+    transform: translateY(-5px);
+}
+
+
+.mg4-col-2 .offer-img{
+    padding: 50px;
+}
+
+.fas.fa-quote-left{
+    font-size: 34px;
+    color: #437c90;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+.mg4-row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+.mg4-select{
+    border: 1px solid #437c90;
+    padding: 5px;
+}
+.mg4-select:focus{
+    outline: none;
+}
+
+.mg4-single-product{
+    margin-top: 80px;
+}
+.mg4-single-product .mg4-col-2 img{
+    padding: 0;
+}
+.mg4-single-product .mg4-col-2{
+    padding: 20px;
+}
+
+.mg4-single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.mg4-single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #437c90;
+}
+
+.mg4-single-product .fas{
+    color: #437c90;
+    margin-left: 10px;
+}
+.mg4-small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.mg4-small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.mg4-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+}
+
+.mg4-card {
+    all: unset;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    width: 150px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+
+}
+
+.mg4-card-container .mg4-card:not(:last-child) {
+    margin-right: 0;
+}
+
+
+.mg4-card-container .mg4-card:not(.highlight-card) {
+    cursor: pointer;
+}
+
+.mg4-card-container .mg4-card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+.mg4-img {
+    width: 180px;
+    flex: 20;
+    height: 180px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.mg4-title-div {
+    flex: 1;
+    text-align: center;
+    font-size: 11px;
+    line-height: 15px;
+}
+.mg4-price-label{
+    text-align: center;
+    margin-top: 10px;
+}
+.mg4-price-span{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.mg4-btn{
+    display: inline-block;
+    background: #74b9ff;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.mg4-btn:hover{
+    background: #563434;
+}
+
+.mg4-cart-page{
+    margin: 80px auto;
+}
+.mg4-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.mg4-cart-info{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+.mg4-th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #74b9ff;
+    font-weight: normal;
+}
+
+.mg4-orderImg{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.mg4-removeBtn{
+    cursor: pointer;
+}
+
+.mg4-checkBox{
+    width: 21px;
+    margin-top: 25px;
+    margin-right: 13px;
+}
+
+
+/* checkout css by sachith */
+.collapsible-header{
+    background-image: linear-gradient(
+    92.6deg,
+    rgb(5, 108, 131) 0.6%,
+    rgb(129, 156, 156) 153.1%
+  );
+  color: white;
+}
+
+.chekout_container form {
+    padding: 10px;
+    width: cover;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.chekout_container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.chekout_container form .row .col {
+    flex: 1 1 250px;
+}
+
+.chekout_container form .row .col .title {
+    font-size: 20px;
+   color: black;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+ .inputBox_common {
+    margin: 10px 15px;
+}
+
+.inputBox_common span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.inputBox_common input {
+    width: 100%;
+    border: 1px solid rgb(153, 148, 148);
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.inputBox_common input:focus {
+   border: #000;
+}
+
+.chekout_container form .row .col .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.inputBox_common {
+    margin-top: 5px;
+}
+
+.payment{
+    border:1 px solid #000;
+    border-radius: 10px;
+    box-shadow: #000;   
+}
+
+.chekout_container form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #437C90;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+
+}
+
+.chekout_container form .submit-btn:hover {
+    background: #0c2e3b;
+
+}
+
+

@@ -1,0 +1,63 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+}
+
+.card {
+    all: unset;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    width: 150px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+
+}
+
+.card-container .card:not(:last-child) {
+    margin-right: 0;
+}
+
+
+.card-container .card:not(.highlight-card) {
+    cursor: pointer;
+}
+
+.card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+.img {
+    width: 180px;
+    flex: 20;
+    height: 180px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.title-div {
+    flex: 1;
+    text-align: center;
+    font-size: 11px;
+    line-height: 15px;
+}
+.price-label{
+    text-align: center;
+    margin-top: 10px;
+}
+.price-span{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+   
