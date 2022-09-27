@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2022 at 12:16 PM
+-- Generation Time: Sep 27, 2022 at 10:37 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -43,8 +43,11 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`p_id`, `p_name`, `p_price`, `p_variety`, `p_stock`, `p_desc`, `p_category`, `p_src`) VALUES
-(1, 'Anime Bleach Poster ', 250.33, 4, 20, 'Japanese Anime Bleach Poster \r\nKraft Paper Retro Posters \r\nHome Room Store Wall Decor Fans\' ', 'ART & COLLECTIBLES', 'images/Category/Art&Col/1/'),
-(2, 'Ancient Coins', 500.12, 3, 10, 'Jesus relief commemorative coin Collection Arts Gifts Alloy Souvenir Gold Plated Coin Metal Antique ', 'ART & COLLECTIBLES', 'images/Category/Art&Col/2/');
+(1, 'Anime Bleach Poster ', 250.33, 4, 20, 'Japanese Anime Bleach Poster \nKraft Paper Retro Posters \nHome Room Store Wall Decor Fans\' ', 'ART & COLLECTIBLES', 'images/Category/Art&Col/1/'),
+(2, 'Ancient Coins', 500.12, 3, 10, 'Jesus relief commemorative coin Collection Arts Gifts Alloy Souvenir Gold Plated Coin Metal Antique ', 'ART & COLLECTIBLES', 'images/Category/Art&Col/2/'),
+(3, 'Hand made Wood and Metal Art', 399, 4, 23, 'Hand made Wood and Metal Art Deco  Figure Skier Sking Down Hill Floor Art.\r\nCondition:\r\nUsedUsed\r\n', 'ART & COLLECTIBLES', 'images/Category/Art&Col/3/'),
+(4, 'HAND MADE ENGLISH STERLING', 365, 4, 32, 'HAND MADE ENGLISH STERLING SILVER ARTS AND CRAFTS CHALICE GOBLET 2002 196g\n', 'ART & COLLECTIBLES', 'images/Category/Art&Col/4/'),
+(5, 'Hand Made Foil Art of Snow White', 22.8, 4, 10, 'Hand Made Foil Art of Snow White and the Seven Dwarfs\r\nCondition:\r\nUsedUsed\r\nPrice:\r\nGBP 19.99\r\nAppr', 'ART & COLLECTIBLES', 'images/Category/Art&Col/5/');
 
 -- --------------------------------------------------------
 
@@ -67,7 +70,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `firstName`, `email`, `password`, `address`, `telephone`) VALUES
 (1, 'mirosh kavinda', 'mk@gmail.com', '7442', '', ''),
-(4, 'sachith navodya', 'sachi@gmail.com', '7442', '', '');
+(4, 'sachith navodya', 'sachi@gmail.com', '7442', '', ''),
+(5, 'dsfds', 'fdsf@gmail.com', 'dsfdsf', '', '');
 
 --
 -- Indexes for dumped tables
@@ -93,13 +97,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
