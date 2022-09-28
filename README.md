@@ -1,4 +1,6 @@
+
 <h1 class='center'>Crafira </h1>
+<h2 class='center'>----------Version 0.1------------------------------------ </h2>
 <h3 class='center'>Market place for your home made items! </h3>
 
 <p>This platform for small business owners who hadn't chance to compete with global and local market</p>

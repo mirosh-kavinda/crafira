@@ -92,7 +92,7 @@ if ($stmt_result->num_rows > 0) {
         </div>
     </div>
 
-    <!-- alternative products -->
+    <!-- alternative products-Static -->
     <div class="small-container">
         <h2 class="center">You also llke</h2>
     </div>

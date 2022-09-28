@@ -1,5 +1,5 @@
 <?php
-// this php file use for load content between footer and nav bar 
+// this  use for load content 
 if(isset($_GET['call_type']))
   {
     $call_type = $_GET['call_type'];

@@ -11,9 +11,7 @@ $(function () {
 });
 
 
-$("a").click(function(){
-  alert("The paragraph was clicked.");
-});
+
 
 // Back to top scrolling button
 $(window).scroll(function() {

@@ -6,7 +6,7 @@
 
       if (input != "") {
         $.ajax({
-          url: 'assets/livesearch.php',
+          url: 'assets/functions.php',
           method: "POST",
           data: { input: input },
 

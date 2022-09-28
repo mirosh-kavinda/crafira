@@ -20,7 +20,9 @@ $total = 0;
             <tbody id="tblCart">
                 <?php
                 if (!empty($_SESSION["cart"])) {
+                
                     foreach ($_SESSION["cart"] as $key => $value) {
+                       
                 ?>
                         <tr>
                             <td>
@@ -59,13 +61,13 @@ $total = 0;
         <!-- <---------------------checout  code sniphet by sachith--------------------------------------------->
 
         <?php
-        
+
         error_reporting(E_ALL);
         ini_set("display_errors", NULL);
-        
+
         if ($_SESSION["ID"]) {
             echo '<style>#name_box{display:none !important;}</style>';
-          } else {
+        } else {
             echo '<style>##name_box{display:block !important;}</style>';
         }
         ?>
@@ -83,8 +85,8 @@ $total = 0;
                                         <div class="inputBox_common" id='name_box'>
                                             <span>full name :</span>
                                             <input type="text" placeholder="Enter full name or signin">
-                                            <a class="center modal-trigger submit-btn" href="#modal1"> 
-                                            Sign In</a>
+                                            <a class="center modal-trigger submit-btn" href="#modal1">
+                                                Sign In</a>
                                         </div>
                                         <br><br>
                                         <div class="inputBox_common">
@@ -142,8 +144,8 @@ $total = 0;
                                             <span>Total Price :</span>
                                             $ <?php echo number_format($total, 2); ?>
                                         </div>
-                                        <input type="submit" name='chekout-proceed'value="Proceed To Checkout" id='proceed_chekout'class="submit-btn">
-                                        <input type="submit"  value="Cancel Order" id='cancell_checkout'class="submit-btn">
+                                        <input type="submit" name='chekout-proceed' value="Proceed To Checkout" id='proceed_chekout' class="submit-btn">
+                                        <input type="submit" value="Cancel Order" id='cancell_checkout' class="submit-btn">
                                     </div>
                                 </div>
                             </form>
@@ -160,9 +162,9 @@ $total = 0;
     $(document).ready(function() {
         $('.collapsible').collapsible();
     });
-    
+
     $("#proceed_chekout").click(function() {
-   alert("Order will placed!.");
-  
-});
+        alert("Order will placed!.");
+
+    });
 </script>
