@@ -20,12 +20,12 @@ include("../assets/db.php");
         ?>
 
                 <a call_type="product" class="carousel-item  btn_load_screen " p_atr="<?php echo $row["p_id"]; ?>">
-                <img src="<?php echo $row["p_src"]; ?>/1.jpg">
+                    <img src="<?php echo $row["p_src"]; ?>/1.jpg">
                 </a>
-            <?php
+        <?php
             }
         }
-            ?>
+        ?>
     </div>
 
     <!-- Scroll icon animation-->
@@ -37,23 +37,24 @@ include("../assets/db.php");
     <div class=" card-container">
         <div class="row">
             <?php
-            $query = $con->prepare("SELECT * FROM products ORDER BY p_id ASC");
+            $query = $con->prepare("SELECT * FROM products where (p_id %2)=0");
             $query->execute();
             $result = $query->get_result();
 
             if (mysqli_num_rows($result) > 0) {
-                $count = 1;
-                for ($count; $count <= 8; $count++) {
-                    while ($row = mysqli_fetch_array($result)) {
+                $counter = 0;
+                while ($row = mysqli_fetch_array($result)) {
+                    $counter++;
 
             ?>
-
-                        <img class="materialboxed   col s6 m4 l3" height="300px" width="300px"src="<?php echo $row["p_src"]; ?>/3.jpg">
-
+                    <img call_type="product" class=" btn_load_screen  materialboxed   col s6 m4 l3" height="300px" width="300px" src="<?php echo $row["p_src"]; ?>3.jpg" p_atr="<?php echo $row["p_id"]; ?>">
             <?php
+                    if ($counter >= 12) {
+                        break;
                     }
                 }
             }
+
             ?>
         </div>
     </div>
@@ -63,52 +64,52 @@ include("../assets/db.php");
     <h1 class="center heading">shops</h1>
     <div class=" container shop-list ">
         <div class="row center">
-            <div class="col s6 m4 l3">
-                <a href="#" id='dahami'>
-                    <img src="images/ProductView/3.jfif" class="circle">
-                    <h5>Dahami shop</h5>
+            <div class="col s6 m4 l4">
+                <a call_type="shop" class=" btn_load_screen " id='dahami'>
+                    <img src="images/shops/dahami.png" class="circle">
+                    <h5>Dahami Crafts</h5>
+                </a>
+            </div>
+            <div class="col s6 m4 l4">
+                <a call_type="shop" class=" btn_load_screen " id='dahami'>
+                    <img src="images/shops/sadunart.png" class="circle">
+                    <h5>Sadun Art</h5>
+                </a>
+            </div>
+            <div class="col s6 m4 l4">
+                <a call_type="shop" class=" btn_load_screen " id='dahami'>
+                    <img src="images/shops/leather.png" class="circle">
+                    <h5>Leather Craft SL</h5>
+                </a>
+            </div>
+            <div class="col s6 m4 l4">
+                <a call_type="shop" class=" btn_load_screen " id='dahami'>
+                    <img src="images/shops/crafty.png" class="circle">
+                    <h5>CRAFTY shop</h5>
+                </a>
+            </div>
+            <div class="col s6 m4 l4">
+                <a call_type="shop" class=" btn_load_screen " id='dahami'>
+                    <img src="images/shops/maskfest.png" class="circle">
+                    <h5>Mask fest </h5>
+                </a>
+            </div>
+            <div class="col s6 m4 l4">
+                <a call_type="shop" class=" btn_load_screen " id='dahami'>
+                    <img src="images/shops/craftersl.png" class="circle">
+                    <h5>Crafter SL </h5>
+                </a>
+            </div>
+            <div class="col s6 m4 l4">
+                <a call_type="shop" class=" btn_load_screen " id='dahami'>
+                    <img src="images/shops/cottonon.png" class="circle">
+                    <h5>Cotton on </h5>
                 </a>
             </div>
             <div class="col s6 m4 l3">
-                <a href="#" id='dahami'>
-                    <img src="images/ProductView/3.jfif" class="circle">
-                    <h5>Dahami shop</h5>
-                </a>
-            </div>
-            <div class="col s6 m4 l3">
-                <a href="#" id='dahami'>
-                    <img src="images/ProductView/3.jfif" class="circle">
-                    <h5>Dahami shop</h5>
-                </a>
-            </div>
-            <div class="col s6 m4 l3">
-                <a href="#" id='dahami'>
-                    <img src="images/ProductView/3.jfif" class="circle">
-                    <h5>Dahami shop</h5>
-                </a>
-            </div>
-            <div class="col s6 m4 l3">
-                <a href="#" id='dahami'>
-                    <img src="images/ProductView/1.jfif" class="circle">
-                    <h5>Dahami shop</h5>
-                </a>
-            </div>
-            <div class="col s6 m4 l3">
-                <a href="#" id='dahami'>
-                    <img src="images/ProductView/3.jfif" class="circle">
-                    <h5>Dahami shop</h5>
-                </a>
-            </div>
-            <div class="col s6 m4 l3">
-                <a href="#" id='dahami'>
-                    <img src="images/ProductView/3.jfif" class="circle">
-                    <h5>Dahami shop</h5>
-                </a>
-            </div>
-            <div class="col s6 m4 l3">
-                <a href="#" id='dahami'>
-                    <img src="images/ProductView/3.jfif" class="circle">
-                    <h5>Dahami shop</h5>
+                <a call_type="shop" class=" btn_load_screen " id='dahami'>
+                    <img src="images/shops/fashionmake.png" class="circle">
+                    <h5>Fashion Maker</h5>
                 </a>
             </div>
         </div>

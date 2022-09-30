@@ -30,6 +30,10 @@ if ($_SESSION["ID"]) {
   echo '<style>#signout{display:none !important;}</style>';
   echo '<style>#signin{display:block !important;}</style>';
 }
+if (!empty($_SESSION["cart"])) {
+  echo '<style>#badge{display:block !important;}</style> ';
+
+}
 ?>
 
 
@@ -41,7 +45,7 @@ if ($_SESSION["ID"]) {
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crafira</title>
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link rel="stylesheet" href="css/index.css" />
@@ -67,21 +71,50 @@ if ($_SESSION["ID"]) {
         var call_type = $(this).attr('call_type');
         if (call_type == 'product') {
           var p_id = $(this).attr('p_atr');
-          $('#product').attr("p_id", p_id);
+
+
+          $(document).ready(function() {
+
+            var cookies = document.cookie.split(";")
+            var cookiePair = cookies[0].split("=");
+            var cookie_user = cookiePair[1]; // remove ending parenthesis here  
+            createCookie("product_id", p_id, "10");
+          });
+
+          // Function to create the cookie 
+          function createCookie(name, value, days) {
+            var expires;
+
+            if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+              expires = "; expires=" + date.toGMTString();
+            } else {
+              expires = "";
+            }
+
+            document.cookie = escape(name) + "=" +
+              escape(value) + expires + "; path=/";
+          }
+
         }
 
         $.getJSON(page_url + 'assets/pageinfo.php', {
           call_type: call_type
         }, function(data, textStatus, xhr) {
 
+
           $(document).attr("title", data.title);
           $('#post-placeholder').load(data.url);
+
+
         });
       });
     });
   </script>
 
 </head>
+
 <body>
 
   <!-- Error handelling alert box -->
@@ -105,11 +138,10 @@ if ($_SESSION["ID"]) {
     }
   </script>
 
+
   <!--Navigation bar-->
   <div id="nav-placeholder" class="scrollspy"></div>
 
-  <!-- this for pass product id  -->
-  <div class='hidden' id="product"></div>
   <!-- Content load here -->
   <div class='content' id="post-placeholder"></div>
 

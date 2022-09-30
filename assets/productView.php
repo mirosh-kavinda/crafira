@@ -1,14 +1,9 @@
-<script>
-    var element = document.getElementById('product');
-    var p_get = element.getAttribute('p_id');
-    <?php $p_get = "<script>document.write(p_get)</script>"; ?>
-</script>
 
 <?php
 // fetch products from database with particular id 
 
 include "db.php";
-$p_get = 1;
+$p_get = isset($_COOKIE['product_id']) ? $_COOKIE['product_id'] : "cookie not set";
 
 $stmt = $con->prepare("SELECT * FROM products where p_id=?");
 $stmt->bind_param("s", $p_get);
@@ -68,7 +63,7 @@ if ($stmt_result->num_rows > 0) {
             </div>
 
             <div class="col-2">
-                <form method='post' action="index.php?action=add&id=<?php $p_get ?>">
+                <form method='post' action="index.php?action=add&id=<?php echo $p_get ?>">
                     <p><?php print_r($_SESSION["p_category"]) ?></p>
                     <h1 id="ProductDetailsName"><?php print_r($_SESSION["p_name"]) ?></h1>
                     <h4 id="ProductDetailsPrice"><?php print_r($_SESSION["p_price"]) ?></h4>

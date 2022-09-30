@@ -19,21 +19,22 @@ $total = 0;
             </thead>
             <tbody id="tblCart">
                 <?php
+         
                 if (!empty($_SESSION["cart"])) {
-                
+                   
                     foreach ($_SESSION["cart"] as $key => $value) {
                        
                 ?>
                         <tr>
                             <td>
                                 <div class="mg4-cart-info">
-                                    <input id="checkBox" value="true" class="checkBox" type="checkbox" style=" width: 21px;margin-top: 23px;margin-right: 13px;">
-                                    <img class="orderImg" src="<?php echo $value["item_src"]; ?>/1.jpg " width="200px" height="200px">
-                                    <div>
+                                   
+                                    <img class="mg4-orderImg " src="<?php echo $value["item_src"]; ?>/1.jpg " width="200px" height="200px">
+                                    <div >
                                         <p id="ProductBuyName"><?php echo $value["item_name"]; ?></p>
                                         <small id="ProductBuyPrice"><?php echo $value["product_price"]; ?></small>
                                         <br>
-                                        <a class="removeBtn" href="index.php?action=delete&id=<?php $p_id ?>" id="RemoveProduct">Remove</a>
+                                        <a class="removeBtn" href="index.php?action=delete&id=<?php echo $value["product_id"]; ?>" id="RemoveProduct">Remove</a>
                                     </div>
                                 </div>
                             </td>

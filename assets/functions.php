@@ -30,20 +30,20 @@ if (isset($_POST["login"])) {
       $_SESSION["First_Name"] = $data['firstName'];
       $_SESSION["Address"] = $data['address'];
       $_SESSION["Telephone"] = $data['telephone'];
-      
-      $e_message = 'Welcome !'+ $_SESSION["First_Name"];
+
+      $e_message = 'Welcome  ';
+      $e_message .= $_SESSION["First_Name"];
       $e_icon = 'success';
       $e_text = 'Have a Nice Day!';
-
     } else {
       $e_message = 'Password is mismatched';
       $e_icon = 'error';
       $e_text = 'Please provide valid password for ';
-      $e_text.= $email ;
+      $e_text .= $email;
     }
   } else {
-    $e_message =$email ;
-    $e_message.= '>> not registered ';
+    $e_message = $email;
+    $e_message .= '>> not registered ';
     $e_icon = 'question';
     $e_text = 'If you do not have an account please sign up ! ';
   }
@@ -86,26 +86,31 @@ else if (isset($_POST['signup'])) {
 
 
 else if (isset($_POST['add'])) {
-  echo '<style>#badge{display:block !important;}</style>';
+
   $e_message = 'Product Added to the cart  ';
   $e_icon = 'success';
   $e_text = 'click on cart icon to view chosen items ! ';
 
   if (isset($_SESSION["cart"])) {
+ 
     $item_array_id = array_column($_SESSION["cart"], "product_id");
-
+  
 
     if (!in_array($_GET["id"], $item_array_id)) {
       $count = count($_SESSION["cart"]);
-
+      
       $item_array = array(
         'product_id' => $_GET["id"],
         'item_name' => $_POST["hidden_name"],
         'product_price' => $_POST["hidden_price"],
         'item_quantity' => $_POST["quantity"],
         'item_src' => $_POST["hidden_src"],
+        
       );
+
+    
       $_SESSION["cart"][$count] = $item_array;
+
     } else {
       $e_message = 'Product Is Already added to the cart !';
       $e_icon = 'warning';
@@ -137,46 +142,45 @@ else if (isset($_POST['add'])) {
     }
   }
 
-// user product chekcout  function <upcomming feature>
+  // user product chekcout  function <upcomming feature>
 
-// } else if (isset($_POST["checkout_proceed"])) {
-//   if (isset($_SESSION['ID'])) {
-//     $address = $_POST["address"];
-//     $city = $_POST["city"];
-//     $province = $_POST["province"];
-//     $postal = $_POST["postal"];
+  // } else if (isset($_POST["checkout_proceed"])) {
+  //   if (isset($_SESSION['ID'])) {
+  //     $address = $_POST["address"];
+  //     $city = $_POST["city"];
+  //     $province = $_POST["province"];
+  //     $postal = $_POST["postal"];
 
-//     $stmt = $con->prepare("select * from users where id=?");
-//     $stmt->bind_param("s", $_SESSION['ID']);
-//     $stmt->execute();
-//     $stmt_result = $stmt->get_result();
-//     if ($stmt_result->num_rows > 0) {
-//       $sql = "INSERT INTO users (address,telephone) VALUES (?,?)";
-//       $stmnt = $con->prepare($sql);
-//       $result = $stmnt->execute([$address, $postal]);
-//       if ($result) {
+  //     $stmt = $con->prepare("select * from users where id=?");
+  //     $stmt->bind_param("s", $_SESSION['ID']);
+  //     $stmt->execute();
+  //     $stmt_result = $stmt->get_result();
+  //     if ($stmt_result->num_rows > 0) {
+  //       $sql = "INSERT INTO users (address,telephone) VALUES (?,?)";
+  //       $stmnt = $con->prepare($sql);
+  //       $result = $stmnt->execute([$address, $postal]);
+  //       if ($result) {
 
-//       }
-//     }
-//   }
+  //       }
+  //     }
+  //   }
 
 
 
-//user logout function 
+  //user logout function 
 
 } else if (isset($_GET["logout"])) {
- 
+
   if (isset($_SESSION['ID'])) {
-    $e_message = 'See you again' + $_SESSION["First_Name"];
+    $e_message = 'See you again  \n';
+    $e_message .= $_SESSION["First_Name"];
     $e_icon = 'success';
-   
+
     unset($_SESSION["ID"]);
     unset($_SESSION["Email"]);
     unset($_SESSION["First_Name"]);
     unset($_SESSION["Address"]);
     unset($_SESSION["Telephone"]);
-   
-   
   }
 
   // user search  function  
@@ -196,7 +200,7 @@ else if (isset($_POST['add'])) {
 
       ?>
         <div class="col s6 m4 l3">
-          <a call_type="product" class=" card btn_load_screen ">
+          <a call_type="product" class=" card btn_load_screen " p_atr='<?php echo $row['p_id']; ?> '>
             <div class="card-container-inner ">
               <img class="img" src='<?php echo $row['p_src']; ?>/1.jpg ' height="200px" width="200px" alt="">
               <div class="title-div">'<?php echo $row['p_name']; ?></div>
@@ -240,5 +244,3 @@ else if (isset($_POST['add'])) {
   ?>
     </div>
 
-
-  

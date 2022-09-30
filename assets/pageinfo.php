@@ -86,6 +86,15 @@ if(isset($_GET['call_type']))
         
       ));
     }
+    else if($call_type == "shop")
+    {
+      echo json_encode(array(
+        'status'=>'success',
+        'title'=> 'Shop View',
+        'url' => 'assets/shopView.php',
+        
+      ));
+    }
 
     
   }

@@ -17,7 +17,7 @@
         ?>
                 <div class="col s6 m4 l3">
                     <div class="card medium">
-                        <div class="card-image waves-effect waves-block waves-light">
+                    <div class="card-image waves-effect waves-block waves-light btn_load_screen  "   call_type="product"  p_atr="<?php echo $row["p_id"]; ?>">
                             <img class="activator" src="<?php print_r($row["p_src"]) ?>/1.jpg">
                         </div>
                         <div class="card-content">
