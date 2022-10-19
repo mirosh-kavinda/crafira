@@ -1,0 +1,4 @@
+Cart.php - holds cart and checkout page
+db.php - database configuration
+functions.php- all the cathty funcitonas
+login.html

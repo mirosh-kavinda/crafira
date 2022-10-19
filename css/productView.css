@@ -1,11 +1,4 @@
-/* a {
-    text-decoration: none;
-    color: #555;
-}
 
-p {
-    color: #555;
-} */
 
 .ProductDetails {
     max-width: 1300px;
@@ -41,8 +34,7 @@ p {
     background: #437c90;
     color: #fff;
     cursor: pointer;
-    padding: 8px 30px;
-    margin: 30px 0;
+padding: auto;
     border-radius: 30px;
     transition: background 0.5s;
 }
@@ -104,14 +96,8 @@ p {
     left: 50%;
     transform: translate(-50%);
 }
-.Addbtn{
-    
 
-}
-/* h4 {
-    color: #555;
-    font-weight: normal;
-} */
+
 
 .col-4 p {
     font-size: 14px;

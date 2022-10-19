@@ -1,6 +1,6 @@
 
 <h1 class='center'>Crafira </h1>
-<h2 class='center'>----------Version 1.1------------------------------------ </h2>
+<h2 class='center'>----------Version 1.2------------------------------------ </h2>
 <h3 class='center'>Market place for your home made items! </h3>
 
 <p>This platform for small business owners who hadn't chance to compete with global and local market</p>
@@ -19,12 +19,12 @@
 ### 6. After pop up the Php my admin dashboard withing webbrowser
 ### 7. create new database as "crafira" 
 ### 8. Select newly created database and go to import tab on tool bar
-### 8. Import our "crafira_db.sql " data base file from CRAFIRA "database" folder in CRAFIRA project directory.
+### 8. Import our "crafira.sql " data base file from CRAFIRA "database" folder in CRAFIRA project directory.
 ### 9. Open New tab on Browser and type following and enter:
         localhost/CRAFIRA/index.php
 
 ### we shared the database file with this(which exported from MySQL)
-        CRAFIRA/Database_setub/crafira_db.sql
+        CRAFIRA/Database_setup/crafira_db.sql
         //there are three videoes to create database 
 ### Files in the directories  goes like follows
 

@@ -1,16 +1,15 @@
 <?php
 session_start();
-
+// include database 
 include "db.php";
 
-// Error message variables
+// Error message variable initialize
 $e_message = '';
 $e_icon = '';
 $e_text = '';
 
 
 // user login  function  
-
 if (isset($_POST["login"])) {
 
   $email = $_POST['email'];
@@ -51,7 +50,6 @@ if (isset($_POST["login"])) {
 
 
 // user Registration   function  
-
 else if (isset($_POST['signup'])) {
   $firstName = $_POST["uname"];
   $email = $_POST["email"];
@@ -83,8 +81,6 @@ else if (isset($_POST['signup'])) {
 
 
 // Product add to cart function 
-
-
 else if (isset($_POST['add'])) {
 
   $e_message = 'Product Added to the cart  ';
@@ -92,25 +88,22 @@ else if (isset($_POST['add'])) {
   $e_text = 'click on cart icon to view chosen items ! ';
 
   if (isset($_SESSION["cart"])) {
- 
+
     $item_array_id = array_column($_SESSION["cart"], "product_id");
-  
 
     if (!in_array($_GET["id"], $item_array_id)) {
       $count = count($_SESSION["cart"]);
-      
+
       $item_array = array(
         'product_id' => $_GET["id"],
         'item_name' => $_POST["hidden_name"],
         'product_price' => $_POST["hidden_price"],
         'item_quantity' => $_POST["quantity"],
         'item_src' => $_POST["hidden_src"],
-        
+
       );
 
-    
       $_SESSION["cart"][$count] = $item_array;
-
     } else {
       $e_message = 'Product Is Already added to the cart !';
       $e_icon = 'warning';
@@ -142,7 +135,7 @@ else if (isset($_POST['add'])) {
     }
   }
 
-  // user product chekcout  function <upcomming feature>
+  // user product chekcout update customer address  function <upcomming feature>
 
   // } else if (isset($_POST["checkout_proceed"])) {
   //   if (isset($_SESSION['ID'])) {
@@ -166,10 +159,9 @@ else if (isset($_POST['add'])) {
   //   }
 
 
-
-  //user logout function 
-
-} else if (isset($_GET["logout"])) {
+}
+//user logout function 
+else if (isset($_GET["logout"])) {
 
   if (isset($_SESSION['ID'])) {
     $e_message = 'See you again  \n';
@@ -182,9 +174,21 @@ else if (isset($_POST['add'])) {
     unset($_SESSION["Address"]);
     unset($_SESSION["Telephone"]);
   }
+} 
+// cart checkout function
+else if (isset($_GET["cart-checkout"])) {
+  unset($_SESSION["cart"]);
+  $e_message = ' Order Placed Succesfully ';
+  $e_icon = 'success';
+} 
+// cart clear function
+else if (isset($_GET["clear-checkout"])) {
+  unset($_SESSION["cart"]);
+}
 
-  // user search  function  
-} else if (isset($_POST['input'])) {
+
+// user search  function  
+else if (isset($_POST['input'])) {
 
   $input = $_POST['input'];
   $query = "SELECT * FROM products WHERE p_name LIKE '{$input}%' OR p_category LIKE '{$input}%' ";
@@ -234,8 +238,6 @@ else if (isset($_POST['add'])) {
           ?>
         </ul>
       </div>
-
-
   <?php
   } else {
     echo '<h1 class="center"> No result Found</h1> ';
@@ -243,4 +245,3 @@ else if (isset($_POST['add'])) {
 }
   ?>
     </div>
-

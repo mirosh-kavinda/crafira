@@ -9,7 +9,7 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform:full-width;
+  text-transform: full-width;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   justify-content: center;
@@ -17,7 +17,7 @@
 
 body {
   background-color: #ffdee9;
-  background-image: linear-gradient(90deg, #ffdee9 0%, #b5fffc 100%);
+  background-image: linear-gradient(90deg, #ffffff 0%, #5cd2af81 100%);
 }
 
 @-webkit-keyframes fadeIn {
@@ -36,14 +36,10 @@ body {
   }
 }
 .content {
-  min-height: calc(100vh - 120px)!important;
-  
+  min-height: calc(100vh - 120px) !important;
 }
 
-
 /* navigation  */
-
-
 
 .navigation {
   background-image: linear-gradient(
@@ -64,30 +60,39 @@ nav.nav-wrappper {
 .logopng {
   mix-blend-mode: lighten;
   width: 180px;
+  margin: 0px 40px;
+  width: 230px;
+}
+.heading {
+  text-decoration: wavy;
+  font-size: 50px;
+  font-weight: 500;
 
 }
+.search-box {
+  height: 45px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
 
-  #cart-icon {
+#cart-icon {
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
 
-    text-decoration: none;
-    padding: 15px 26px;
-    position: relative;
-    display: inline-block;
-    border-radius: 2px;
-  }
-  
-  
-  
-  #badge {
-    position: absolute;
-    display: none;
-    top: 4px;
-    right: 10px;
-   width: 20px;
-    border-radius: 100%;
-    background: red;
-    color: white;
-  }
+#badge {
+  position: absolute;
+  display: none;
+  top: 4px;
+  right: 10px;
+  width: 20px;
+  border-radius: 100%;
+  background: red;
+  color: white;
+}
 
 .search-box {
   display: flex;
@@ -97,11 +102,7 @@ nav.nav-wrappper {
   border-radius: 10px;
 }
 
-
-
 /* carousel*/
-
-
 
 .carousel {
   height: 500px;
@@ -135,11 +136,7 @@ nav.nav-wrappper {
   text-align: center;
 }
 
-
-
 /* mouse animation */
-
-
 
 .icon-scroll,
 .icon-scroll:before {
@@ -178,32 +175,12 @@ nav.nav-wrappper {
     transform: translateY(26px);
   }
 }
-
-
-/* What is crafira content */
-
-
-.what-is-crafira {
-  background-image: linear-gradient(
-    92.6deg,
-    rgb(5, 108, 131) 0.7%,
-    rgb(129, 156, 156) 153.1%
-  );
-  border: black 1px solid;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px 10px;
-}
 .modal {
   top: 6% !important;
   max-height: 99%;
 }
-/* gain Responsive  */
-
-.heading {
-  font-size: 44px;
-  font-weight: 500;
-  color: bla;
+.para {
+  color: white;
 }
 
 /* footer */
@@ -212,7 +189,6 @@ nav.nav-wrappper {
   background: #373f51;
   bottom: 10px;
 }
-
 .footer-bottom {
   background: #1b1b1e;
   width: cover;
@@ -225,15 +201,7 @@ nav.nav-wrappper {
   border-radius: 900px;
   margin-top: 15px;
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-*:focus {
-  outline: 0;
-}
 
 /* responsive works done here */
 
@@ -249,14 +217,14 @@ nav.nav-wrappper {
   .logopng {
     margin: 8px 20px;
     width: 230px;
-  
   }
   .modal {
     top: 3% !important;
     max-height: 98% !important;
   }
   .heading {
-    font-size: 29px;
+    text-decoration: wavy;
+    font-size: 80px;
     font-weight: 500;
   }
 
@@ -285,18 +253,8 @@ nav.nav-wrappper {
     max-height: 9;
   }
   .heading {
-    font-size: 50px;
+    text-decoration: wavy;
+    font-size: 30px;
     font-weight: 500;
-  }
-}
-
-@media only screen and (min-width: 992px) {
- 
-  .search-box {
-    height: 45px;
-    margin-top: 10px;
-  }
-  .logopng {
-    margin-left: 150px;
   }
 }

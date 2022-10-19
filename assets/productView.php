@@ -1,10 +1,10 @@
-
 <?php
 // fetch products from database with particular id 
 
 include "db.php";
-$p_get = isset($_COOKIE['product_id']) ? $_COOKIE['product_id'] : "cookie not set";
 
+// get the product id using cookie
+$p_get = isset($_COOKIE['product_id']) ? $_COOKIE['product_id'] : "cookie not set";
 $stmt = $con->prepare("SELECT * FROM products where p_id=?");
 $stmt->bind_param("s", $p_get);
 $stmt->execute();
@@ -22,7 +22,7 @@ if ($stmt_result->num_rows > 0) {
     $_SESSION["p_src"] = $data['p_src'];
     $_SESSION["p_stock"] = $data['p_stock'];
 } else {
-    echo '<script>alert("product not exist !")</script>';
+    
     die;
 }
 
@@ -50,6 +50,7 @@ if ($stmt_result->num_rows > 0) {
 </script>
 
 
+<!-- product view html code  -->
 <link rel="stylesheet" href="css/productView.css">
 <div id="ProductDetails ">
     <p id="cartNumber"></p>
@@ -73,13 +74,10 @@ if ($stmt_result->num_rows > 0) {
                     <input type="hidden" name="hidden_price" value="<?php print_r($_SESSION["p_price"]) ?>">
                     <input type="hidden" name="hidden_src" value="<?php print_r($_SESSION["p_src"]) ?>">
                     <input type="number" name="quantity" id='qty' class="form-control" value="1">
-                    <label for="qty">Available : <?php print_r($_SESSION["p_stock"]) ?></label>
-         
-                    <input id="Addbtn"class="waves-effect waves-light btn ADDbtn" style="width: 80px; height:50px;padding:10px 10px;" type="submit" name="add" value="Add">
-              
-               
-
-                    <h3>Product Details</h3>
+                    <br>
+                    <label for="qty">Available :  <?php print_r($_SESSION["p_stock"]) ?></label>
+                    <input id="Addbtn" class=" btn"  type="submit" name="add" value="Add">
+                    <h3 >Product Details</h3>
                     <br>
                     <p><?php print_r($_SESSION["p_desc"]) ?></p>
                 </form>
@@ -143,5 +141,4 @@ if ($stmt_result->num_rows > 0) {
             </div>
         </div>
     </div>
-
 </div>

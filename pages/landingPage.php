@@ -1,12 +1,11 @@
-<!--Carousel Content-->
 <?php
 include("../assets/db.php");
-
 ?>
 <div>
+
     <link rel="stylesheet" href="css/landingPage.css" />
-    <p class="center heading">Fresh finds fit for cozy season.</p>
-    <script type="text/javascript" src="js/Carousel.js"> </script>
+    <p class="center heading ">Fresh finds fit for cozy season.</p>
+    <script type="text/javascript" src="js/main.js"> </script>
 
     <div class="carousel ">
         <?php
@@ -18,7 +17,6 @@ include("../assets/db.php");
 
             while ($row = mysqli_fetch_array($result)) {
         ?>
-
                 <a call_type="product" class="carousel-item  btn_load_screen " p_atr="<?php echo $row["p_id"]; ?>">
                     <img src="<?php echo $row["p_src"]; ?>/1.jpg">
                 </a>
@@ -33,9 +31,10 @@ include("../assets/db.php");
     <br><br>
 
     <!--list container-->
-    <h1 class="center">Popular Crafts right now</h1>
+    <h1 class="center heading">Popular Crafts right now</h1>
     <div class=" card-container">
         <div class="row">
+
             <?php
             $query = $con->prepare("SELECT * FROM products where (p_id %2)=0");
             $query->execute();
@@ -45,9 +44,9 @@ include("../assets/db.php");
                 $counter = 0;
                 while ($row = mysqli_fetch_array($result)) {
                     $counter++;
-
             ?>
-                    <img call_type="product" class=" btn_load_screen  materialboxed   col s6 m4 l3" height="300px" width="300px" src="<?php echo $row["p_src"]; ?>3.jpg" p_atr="<?php echo $row["p_id"]; ?>">
+                    <img call_type="product" class=" btn_load_screen  materialboxed  col s6 m4 l3" height="300px" width="300px"  src="<?php echo $row["p_src"]; ?>3.jpg" p_atr="<?php echo $row["p_id"]; ?>">
+
             <?php
                     if ($counter >= 12) {
                         break;
@@ -121,7 +120,7 @@ include("../assets/db.php");
     <h1 class="center heading ">What is Crafira?</h1>
     <br><br>
     <div class="what-is-crafira row">
-        <div class="col s12 m4 a">
+        <div class="col s12 m4 para">
             <h5 class="center">A community doing good</h5>
             <p class="light">Crafira is a global online marketplace, where people come together to make, sell, buy, and
                 collect unique Handmade items. We’re also a community pushing for positive change for small businesses,
@@ -129,14 +128,14 @@ include("../assets/db.php");
                 the planet. Here are some of the ways we’re making a positive impact, together.</p>
         </div>
         <hr>
-        <div class="col s12 m4">
+        <div class="col s12 m4 para">
             <h5 class="center">Support independent creators</h5>
             <p class="light">There’s no crafira warehouse – just millions of people selling the things they love. We
                 make
                 the whole process easy, helping you connect directly with makers to find something extraordinary.</p>
         </div>
         <hr>
-        <div class="col s12 m4">
+        <div class="col s12 m4 para">
             <h5 class="center">Peace of mind</h5>
             <p class="light">Your privacy is the highest priority of our dedicated team. And if you ever need
                 assistance,

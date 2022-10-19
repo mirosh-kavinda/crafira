@@ -1,5 +1,6 @@
 <!-- welcome to crafira website -->
 <?php
+
 // php code using for load web content without refreshing the webpage 
 if (
   isset($_SERVER['HTTPS']) &&
@@ -30,12 +31,13 @@ if ($_SESSION["ID"]) {
   echo '<style>#signout{display:none !important;}</style>';
   echo '<style>#signin{display:block !important;}</style>';
 }
+
+//cart status update
 if (!empty($_SESSION["cart"])) {
   echo '<style>#badge{display:block !important;}</style> ';
-
 }
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,9 +60,13 @@ if (!empty($_SESSION["cart"])) {
 
   <!-- // script   for load web content without refreshing the webpage -->
   <script type="text/javascript">
+
+    //load home page
     $(function() {
       $("#post-placeholder").load("pages/landingPage.php");
     });
+
+
 
     $(document).ready(function($) {
       var page_url = '<?php echo $app_url ?>/';
@@ -114,6 +120,7 @@ if (!empty($_SESSION["cart"])) {
   </script>
 
 </head>
+
 
 <body>
 
