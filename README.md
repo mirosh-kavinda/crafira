@@ -7,11 +7,11 @@
 
 #### git hub Link : https://github.com/mirosh-kavinda/crafira.git 
 
-
+Cancel changes
 ## To run website you need to follow below mentioned steps
 
 ### 1 .You need to install XAMPP software (we are using Apache and MYSQL )
-### 2 .After installation,place CRAFIRA project folder on  XAMPP installed directory , 
+### 2 .After installation,place CRAFIRA project folder inside htdocs folder on  XAMPP installed directory , 
         "C:\xampp\htdocs"
 ### 3. Rename the root folder name as 'CRAFIRA'
 ### 4. Start the Apache and MYSQL servers on XAMPP dashboard.
@@ -34,7 +34,7 @@
                 _....
         _css
                 _....
-        _database
+        _Database_setup
                 _....
         _images
                 _....
