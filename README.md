@@ -4,7 +4,7 @@
 <h3 class='center'>Market place for your home made items! </h3>
 
 <p>This platform for small business owners who hadn't chance to compete with global and local market</p>
-#### High Fidelty MockUp: https://www.figma.com/file/Nk0v6Zf5KHicFH8Z3flpjS/shoppingCart?node-id=0%3A1 
+#### High Fidelty MockUp: https://www.figma.com/file/Nk0v6Zf5KHicFH8Z3flpjS/shoppingCart?node-id=0%3A1 <br>
 #### Git hub Link : https://github.com/mirosh-kavinda/crafira.git 
 
 <h1 style="align-items: 'center'">Landing Page </h1>
