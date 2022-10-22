@@ -7,10 +7,10 @@
 
 #### git hub Link : https://github.com/mirosh-kavinda/crafira.git 
 
-
+#Landing Page
 ![image](https://user-images.githubusercontent.com/74175084/197315205-37c3dd0e-fa1e-41a3-b616-723c9d72c784.png)
 ![image](https://user-images.githubusercontent.com/74175084/197315228-e4cc66c0-c7d5-4500-9e76-a87aebf9d87b.png)
-![image](https://user-images.githubusercontent.com/74175084/197315241-0148643e-e73a-4522-bca0-5216bc5a0583.png)
+![image](https://user-images.githubusercontent.com/74175084/197315445-9f0524ba-78dc-4612-9158-b2132b5e7261.png)
 ![image](https://user-images.githubusercontent.com/74175084/197315367-353beac5-bd1d-45db-b579-e27f236d6040.png)
 
 
@@ -29,10 +29,10 @@
 ### 9. Open New tab on Browser and type following and enter:
         localhost/CRAFIRA/index.php
 
-### we shared the database file with this(which exported from MySQL)
+### I shared the database file with this(which exported from MySQL)
         CRAFIRA/Database_setup/crafira_db.sql
-        //there are three videoes to create database 
-### Files in the directories  goes like follows
+        //Inside the folder I added three videoes to setup database 
+### Files in the architecture.
 
 
     _CRAFIRA
