@@ -7,7 +7,7 @@
 #### High Fidelty MockUp: https://www.figma.com/file/Nk0v6Zf5KHicFH8Z3flpjS/shoppingCart?node-id=0%3A1 
 #### Git hub Link : https://github.com/mirosh-kavinda/crafira.git 
 
-                                <h1>Crafira </h1>
+<h1 style="align-items: 'center'">Landing Page </h1>
 ![image](https://user-images.githubusercontent.com/74175084/197315205-37c3dd0e-fa1e-41a3-b616-723c9d72c784.png)
 ![image](https://user-images.githubusercontent.com/74175084/197315228-e4cc66c0-c7d5-4500-9e76-a87aebf9d87b.png)
 ![image](https://user-images.githubusercontent.com/74175084/197315445-9f0524ba-78dc-4612-9158-b2132b5e7261.png)
