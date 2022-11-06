@@ -39,6 +39,7 @@ if (!empty($_SESSION["cart"])) {
 
 ?>
 
+<!-- HTML CODE START -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,7 +62,7 @@ if (!empty($_SESSION["cart"])) {
   <!-- // script   for load web content without refreshing the webpage -->
   <script type="text/javascript">
 
-    //load home page
+    //load LANDING PAGE
     $(function() {
       $("#post-placeholder").load("pages/landingPage.php");
     });
@@ -79,6 +80,7 @@ if (!empty($_SESSION["cart"])) {
           var p_id = $(this).attr('p_atr');
 
 
+          // GENERATE COOKIE FOR LOAD PARTICULAR PRODUCT
           $(document).ready(function() {
 
             var cookies = document.cookie.split(";")
@@ -87,7 +89,7 @@ if (!empty($_SESSION["cart"])) {
             createCookie("product_id", p_id, "10");
           });
 
-          // Function to create the cookie 
+        
           function createCookie(name, value, days) {
             var expires;
 
@@ -105,6 +107,7 @@ if (!empty($_SESSION["cart"])) {
 
         }
 
+        // GET THE PAGES DATA
         $.getJSON(page_url + 'assets/pageinfo.php', {
           call_type: call_type
         }, function(data, textStatus, xhr) {

@@ -32,6 +32,8 @@ $(document).ready(function () {
       }
   );
 });
+
+
 const elems = document.querySelector('.carousel');
 const duration = 3000; //milliseconds 
 

@@ -67,9 +67,9 @@ $total = 0;
         ini_set("display_errors", NULL);
 
         if ($_SESSION["ID"]) {
-            echo '<style>#name_box{display:none !important;}</style>';
+            echo '<style>.userdetails{display:none !important;}</style>';
         } else {
-            echo '<style>##name_box{display:block !important;}</style>';
+            echo '<style>.userdetails{display:block !important;}</style>';
         }
         ?>
 
@@ -80,25 +80,25 @@ $total = 0;
                         <div class="chekout_container">
                             <form action="index.php" method="post" class="chekout">
                                 <div class="row">
-                                    <div class="col">
-                                        <h3 class="title">Billing address</h3>
-                                        <div class="inputBox_common" id='name_box'>
+                                    <div class="col ">
+                                        <h3 class="title userdetails">Billing address</h3>
+                                        <div class="inputBox_common userdetails" class="userdetails">
                                             <span>full name :</span>
                                             <input type="text" placeholder="Enter full name or signin">
                                             <a class="center modal-trigger submit-btn" href="#modal1">
                                                 Sign In</a>
                                         </div>
                                         <br><br>
-                                        <div class="inputBox_common">
+                                        <div class="inputBox_common userdetails">
                                             <span>Address :</span>
                                             <input type="text" name='address' placeholder="House Name-Street-Village" require>
                                         </div>
-                                        <div class="inputBox_common">
+                                        <div class="inputBox_common userdetails">
                                             <span>City :</span>
                                             <input type="text" name='city' placeholder="City" require>
                                         </div>
 
-                                        <div class="flex">
+                                        <div class="flex userdetails">
                                             <div class="inputBox_common" require>
                                                 <span>Province :</span>
                                                 <input type="text" placeholder="Southern">
