@@ -47,6 +47,8 @@ $total = 0;
 
                         $total = $total + ($value["item_quantity"] * $value["product_price"]);
                     }
+                    $_SESSION["total"] = $total;
+
                     ?>
                     <tr>
                         <td colspan="3" align="right">Total</td>
@@ -60,7 +62,7 @@ $total = 0;
         </table>
 
 
- <!-- <---------------------checkout  code sniphet by sachith--------------------------------------------->
+        <!-- <---------------------checkout  code sniphet by sachith--------------------------------------------->
         <?php
 
         error_reporting(E_ALL);
@@ -78,37 +80,44 @@ $total = 0;
                 <div class="collapsible-header">Checkout</div>
                 <div class="collapsible-body"><span>
                         <div class="chekout_container">
-                            <form action="index.php" method="post" class="chekout">
+                            <form action="index.php?cart-checkout" method="post" class="chekout" id="checkout_proceed">
                                 <div class="row">
                                     <div class="col ">
                                         <h3 class="title userdetails">Billing address</h3>
-                                        <div class="inputBox_common userdetails" class="userdetails">
-                                            <span>full name :</span>
-                                            <input type="text" placeholder="Enter full name or signin">
+                                        <div class="inputBox_common userdetails">
+                                            <span>Full name :</span>
+                                            <input type="text" name="f_name" placeholder="Enter full name or signin">
+
                                             <a class="center modal-trigger submit-btn" href="#modal1">
                                                 Sign In</a>
                                         </div>
                                         <br><br>
-                                        <div class="inputBox_common userdetails">
-                                            <span>Address :</span>
-                                            <input type="text" name='address' placeholder="House Name-Street-Village" require>
+                                        <div class="<?php echo $_SESSION["u_address"] ? 'inputBox_common userdetails' : 'inputBox_common'; ?>">
+                                            <span>phone Number:</span>
+                                            <input type="text" name="phone_no" placeholder="Enter Phone NO ">
+
                                         </div>
-                                        <div class="inputBox_common userdetails">
+                                        <br><br>
+                                        <div class="<?php echo $_SESSION["u_address"] ? 'inputBox_common userdetails' : 'inputBox_common'; ?>">
+                                            <span>Address :</span>
+                                            <input type="text" name='addressl1' placeholder="House Name-Street-Village">
+                                        </div>
+                                        <div class="<?php echo $_SESSION["u_address"] ? 'inputBox_common userdetails' : 'inputBox_common'; ?>">
                                             <span>City :</span>
-                                            <input type="text" name='city' placeholder="City" require>
+                                            <input type="text" name='city' placeholder="City">
                                         </div>
 
-                                        <div class="flex userdetails">
-                                            <div class="inputBox_common" require>
+                                        <div class="flex ">
+                                            <div class="<?php echo $_SESSION["u_address"] ? 'inputBox_common userdetails' : 'inputBox_common'; ?>" require>
                                                 <span>Province :</span>
-                                                <input type="text" placeholder="Southern">
+                                                <input name="province" type="text" placeholder="Southern">
                                             </div>
-                                            <div class="inputBox_common">
+                                            <div class="<?php echo $_SESSION["u_address"] ? 'inputBox_common userdetails' : 'inputBox_common'; ?>">
                                                 <span>Postal code :</span>
-                                                <input type="text" name='postal' placeholder="Zip code" require>
+                                                <input type="text" name='postal' maxlength="5" placeholder="Zip code">
                                             </div>
                                         </div>
-                                       
+
                                         <h3 class="title">Return Policy</h3>
                                         <div class="scroll">
                                             <p class="center">
@@ -124,46 +133,38 @@ $total = 0;
                                             </p>
                                         </div>
                                         <label class="center">
-                                            <input type="checkbox"  require/>
+                                            <input type="checkbox" />
                                             <span>I Agree to the return policy</span>
                                         </label>
                                     </div>
                                     <div class="col payment">
                                         <h3 class="title">payment</h3>
-                                        <div class="dd">
-                                            <label for="card">Card Type:</label>
-                                            <select id="card">
-                                                <option value="Vsa" class="fab fa-cc-visa">Visa</option>
-                                                <option value="Mas" class="fab fa-cc-mastercard">Master</option>
-
-                                            </select>
-                                        </div>
-
                                         <div class="inputBox_common">
                                             <span>Name on card :</span>
-                                            <input type="text" placeholder="Name" require>
+                                            <input type="text" size="50" maxlength="25" placeholder="Name">
                                         </div>
                                         <div class="inputBox_common">
                                             <span>Credit card number :</span>
-                                            <input type="text" placeholder="1111 2222 3333 4444" require>
+                                            <input type="text" size="16" maxlength="16" placeholder="1111 2222 3333 4444">
                                         </div>
 
                                         <div class="flex">
                                             <div class="inputBox_common">
                                                 <span>Exp : Month/year </span>
-                                                <input type="number/number" placeholder="10/24" require>
+                                                <input type="number/number" maxlength="5" size="5" placeholder="10/24">
                                             </div>
                                             <div class="inputBox_common">
                                                 <span>CVV :</span>
-                                                <input type="text" placeholder="1234" require>
+                                                <input type="text" size="3" maxlength="3" placeholder="123">
                                             </div>
                                         </div>
 
                                         <div class="inputBox_common">
                                             <span>Total Price :</span>
-                                            $ <?php echo number_format($total, 2); ?>
+
+                                            $ <?php echo $_SESSION["total"];  ?>
                                         </div>
-                                        <a type="submit" name='chekout-p' id='proceed_chekout' class="submit-btn center" href="index.php?cart-checkout">Proceed To Checkout</a>
+                                        <button type="submit" name='cart-checkout' id='cart-checkout' class="submit-btn center">Proceed To Checkout</button>
                                         <a type="submit" name='chekout-p' id='proceed_chekout' class="submit-btn center" href="index.php?clear-checkout">Clear Checkout</a>
                                         <!-- <input type="submit" value="Clear Checkout" id='cancell_checkout' class="submit-btn"> -->
                                     </div>

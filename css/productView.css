@@ -30,13 +30,10 @@
 }
 
 .btn {
-    display: inline-block;
     background: #437c90;
     color: #fff;
     cursor: pointer;
-padding: auto;
-    border-radius: 30px;
-    transition: background 0.5s;
+width: 100px;
 }
 
 .btn:hover {
@@ -61,8 +58,7 @@ padding: auto;
 .small-container {
     max-width: 1080px;
     margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+ 
 }
 
 .col-4 {
@@ -290,8 +286,8 @@ span {
 
 .small-img-row {
     display: flex;
-    justify-content: space-between;
-    justify-self: right;
+    justify-content: center;
+    
 }
 
 .small-img-col {

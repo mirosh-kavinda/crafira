@@ -187,19 +187,20 @@ nav.nav-wrappper {
 
 .footer {
   background: #373f51;
-  bottom: 10px;
+ 
 }
 .footer-bottom {
   background: #1b1b1e;
   width: cover;
   text-align: center;
-  height: 30px;
+;
 }
 .loging {
   width: 60px;
   border: 3px solid white;
   border-radius: 900px;
   margin-top: 15px;
+
 }
 
 

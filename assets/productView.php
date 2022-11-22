@@ -22,7 +22,7 @@ if ($stmt_result->num_rows > 0) {
     $_SESSION["p_src"] = $data['p_src'];
     $_SESSION["p_stock"] = $data['p_stock'];
 } else {
-    
+
     die;
 }
 
@@ -56,9 +56,9 @@ if ($stmt_result->num_rows > 0) {
     <p id="cartNumber"></p>
     <div class="small-container single-product">
         <div class="row">
-            <div class="col-2">
+            <div class="col-2" height="100vh">
                 <img src="" width="100%" id="ProductImg">
-                <div class="small-img-row ">
+                <div class=" d-flex jusify-content-center small-img-row ">
                     <div id="products-cards-container"></div>
                 </div>
             </div>
@@ -75,9 +75,10 @@ if ($stmt_result->num_rows > 0) {
                     <input type="hidden" name="hidden_src" value="<?php print_r($_SESSION["p_src"]) ?>">
                     <input type="number" name="quantity" id='qty' class="form-control" value="1">
                     <br>
-                    <label for="qty">Available :  <?php print_r($_SESSION["p_stock"]) ?></label>
-                    <input id="Addbtn" class=" btn"  type="submit" name="add" value="Add">
-                    <h3 >Product Details</h3>
+                    <label for="qty">Available : <?php print_r($_SESSION["p_stock"]) ?></label>
+
+                    <input type="submit" id="Addbtn" class="btn btn-info" type="submit" name="add" value="Add ">
+                    <h3>Product Details</h3>
                     <br>
                     <p><?php print_r($_SESSION["p_desc"]) ?></p>
                 </form>
