@@ -1,12 +1,11 @@
-
 //   <!-- live search script -->
-  $(document).ready(function () {
+$(document).ready(function () {
     $("#live_search").keyup(function () {
       var input = $(this).val();
 
       if (input != "") {
         $.ajax({
-          url: 'assets/functions.php',
+          url: 'assets/search.php',
           method: "POST",
           data: { input: input },
 

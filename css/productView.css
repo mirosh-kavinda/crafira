@@ -29,16 +29,17 @@
     margin: 25px 0;
 }
 
-.btn {
+/* .btn {
     background: #437c90;
     color: #fff;
     cursor: pointer;
-width: 100px;
+    width: 100px;
+
 }
 
 .btn:hover {
     background: #373f51;
-}
+} */
 
 
 .categories {
@@ -263,21 +264,12 @@ span {
     margin-top: 20px;
 }
 
-.single-product input {
-    width: 50px;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 20px;
-    margin-right: 10px;
-    border: 1px solid #437c90;
-}
+
 #qty{
     width: 100px;
 }
 
-/* input:focus {
-    outline: none;
-} */
+
 
 .single-product .fas {
     color: #437c90;

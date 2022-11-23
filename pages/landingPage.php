@@ -31,7 +31,7 @@ include("../assets/db.php");
     <br><br>
 
     <!--list container-->
-    <h1 class="center heading">Popular Crafts right now</h1>
+    <h1 class="center heading mt-5">Popular Crafts right now</h1>
     <div class=" card-container">
         <div class="row">
 
@@ -45,7 +45,7 @@ include("../assets/db.php");
                 while ($row = mysqli_fetch_array($result)) {
                     $counter++;
             ?>
-                    <img call_type="product" class=" btn_load_screen  materialboxed  col s6 m4 l3" height="300px" width="300px"  src="<?php echo $row["p_src"]; ?>3.jpg" p_atr="<?php echo $row["p_id"]; ?>">
+                    <img call_type="product" class=" btn_load_screen  materialboxed  col s6 m4 l3" height="300px" width="300px" src="<?php echo $row["p_src"]; ?>3.jpg" p_atr="<?php echo $row["p_id"]; ?>">
 
             <?php
                     if ($counter >= 12) {
@@ -143,3 +143,4 @@ include("../assets/db.php");
         </div>
     </div>
 </div>
+

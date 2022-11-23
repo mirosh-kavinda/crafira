@@ -37,6 +37,7 @@ if (!empty($_SESSION["cart"])) {
   echo '<style>#badge{display:block !important;}</style> ';
 }
 
+
 ?>
 
 <!-- HTML CODE START -->
@@ -61,7 +62,6 @@ if (!empty($_SESSION["cart"])) {
 
   <!-- // script   for load web content without refreshing the webpage -->
   <script type="text/javascript">
-
     //load LANDING PAGE
     $(function() {
       $("#post-placeholder").load("pages/landingPage.php");
@@ -89,7 +89,7 @@ if (!empty($_SESSION["cart"])) {
             createCookie("product_id", p_id, "10");
           });
 
-        
+
           function createCookie(name, value, days) {
             var expires;
 
@@ -151,7 +151,8 @@ if (!empty($_SESSION["cart"])) {
 
   <!--Navigation bar-->
   <div id="nav-placeholder" class="scrollspy"></div>
-
+  <!--Search Result-->
+  <div id="searchresult"></div>
   <!-- Content load here -->
   <div class='content' id="post-placeholder"></div>
 
@@ -162,7 +163,11 @@ if (!empty($_SESSION["cart"])) {
   <script src="js/materialize.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/main.js"></script>
-
+  <script src="js/nav.js"></script>
+  <script src="../js/hbspt.js"></script>
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/23220584.js"></script>
+<!-- End of HubSpot Embed Code -->
 
 
 </body>

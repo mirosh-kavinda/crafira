@@ -74,10 +74,14 @@ if ($stmt_result->num_rows > 0) {
                     <input type="hidden" name="hidden_price" value="<?php print_r($_SESSION["p_price"]) ?>">
                     <input type="hidden" name="hidden_src" value="<?php print_r($_SESSION["p_src"]) ?>">
                     <input type="number" name="quantity" id='qty' class="form-control" value="1">
-                    <br>
                     <label for="qty">Available : <?php print_r($_SESSION["p_stock"]) ?></label>
+                    <br>
 
-                    <input type="submit" id="Addbtn" class="btn btn-info" type="submit" name="add" value="Add ">
+                    <input type="submit" class="btn" type="submit" name="add" value="Add">
+
+
+
+
                     <h3>Product Details</h3>
                     <br>
                     <p><?php print_r($_SESSION["p_desc"]) ?></p>
