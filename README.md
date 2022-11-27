@@ -63,5 +63,10 @@
 
 ## Copyright and license
 Code Copyright 2022. Code released under the MIT license.
-MSE GROUP 
+MSE GROUP (Academic)
+<br>
+Collabrators : <br>
+Mirosh kavinda <br>
+Sachith Navodya <br>
+Eshadi Kalhara <br>
 
